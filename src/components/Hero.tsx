@@ -45,7 +45,7 @@ const Hero = () => {
               <div className="text-center space-y-6 py-8 w-full">
                 <div className="space-y-4">
                   <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-                    Shriram Mange
+                    Mina Remon
                     <span className="block text-[#3DDC84] text-xl sm:text-2xl mt-2">
                       Android Developer
                     </span>
