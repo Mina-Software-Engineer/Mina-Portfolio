@@ -45,7 +45,7 @@ const projects = [
   {
     title: "Moonchat",
     description: "Real-time messaging application with Firebase, Room Database",
-    image: "/projects/moonchat.jpeg",
+    image: "/projects/moonchat.png",
     icon: Smartphone,
     techStack: ["Kotlin", "Firebase", "Room Database", "MVVM", "Pagination"],
     metrics: { type: "Impact", value: "Accessibility" },

@@ -26,7 +26,7 @@ const Contact = () => {
               <div className="space-y-4 mb-8">
                 <a href="https://wa.me/+201006950385" className="contact-link">
                   <MessageCircle className="w-5 h-5 contact-icon" />
-                  WhatsApp
+                  WhatsApp +20 100-695-0385
                 </a>
                 <a href="https://t.me/Mina_Remon" className="contact-link">
                   <Send className="w-5 h-5 contact-icon" />
@@ -42,7 +42,7 @@ const Contact = () => {
                 <a href="https://github.com/Mina-Software-Engineer" className="social-link">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="https://linkedin.com/in/shriram-mange" className="social-link">
+                <a href="https://linkedin.com/in/mina-remon" className="social-link">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="https://wa.me/+201006950385" className="social-link">

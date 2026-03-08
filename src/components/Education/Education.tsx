@@ -6,8 +6,8 @@ import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
 const educationData = [
   {
     id: 3,
-    degree: "Bachelor of Computer Applications",
-    degreeShort: "BCA",
+    degree: "Bachelor of Computer Science",
+    degreeShort: "Bachelor of Computer Science",
     institution: "Modern Academy",
     location: "Maadi, Cairo",
     year: "2020-2024",
@@ -31,12 +31,12 @@ const educationData = [
       "Active Member - Tech Innovation Club"
     ],
     skills: ["Problem Solving", "Team Leadership", "Project Management"],
-    logo: "/logos/modernacademy.png"
+    logo: "/logos/modernacademy.jpg"
   },
   {
     id: 2,
     degree: "Higher Secondary Certificate",
-    degreeShort: "HSC",
+    degreeShort: "Higher Secondary Certificate",
     institution: "El Salam School",
     location: "Seuz, Egypt",
     year: "2017-2019",
@@ -58,12 +58,12 @@ const educationData = [
       "Perfect Attendance"
     ],
     skills: ["Analytical Thinking", "Mathematical Reasoning", "Scientific Method"],
-    logo: "/logos/highschool.jpeg"
+    logo: "/logos/highschool.jpg"
   },
   {
     id: 4,
     degree: "Secondary School Certificate",
-    degreeShort: "SSC",
+    degreeShort: "Secondary School Certificate",
     institution: "Ahmed Lotfy Elsayed Experimental Language School",
     location: "Nashik, Maharashtra",
     year: "2005-2016",
@@ -120,7 +120,7 @@ const Education = () => {
               <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2D2D2D] rounded-lg sm:rounded-xl p-3 sm:p-4 border border-gray-700/50">
                 <div className="flex items-center justify-center mb-2">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#3DDC84] mr-2" />
-                  <span className="text-lg sm:text-xl font-bold text-white">5+</span>
+                  <span className="text-lg sm:text-xl font-bold text-white">15+</span>
                 </div>
                 <p className="text-gray-400 text-xs sm:text-sm">Years of Education</p>
               </div>
