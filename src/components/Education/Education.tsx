@@ -31,63 +31,61 @@ const educationData = [
       "Active Member - Tech Innovation Club"
     ],
     skills: ["Problem Solving", "Team Leadership", "Project Management"],
-    logo: "/logos/sandip_university.png"
+    logo: "/logos/modernacademy.png"
   },
   {
     id: 2,
     degree: "Higher Secondary Certificate",
     degreeShort: "HSC",
-    institution: "KTHM College",
-    location: "Nashik, Maharashtra",
-    year: "2020-2022",
+    institution: "El Salam School",
+    location: "Seuz, Egypt",
+    year: "2017-2019",
     status: "Completed",
-    score: "53.00%",
+    score: "76.00%",
     scoreType: "Percentage",
     level: "secondary",
     showScore: false,
-    description: "Science stream with focus on Mathematics and Computer Science fundamentals.",
+    description: "",
     courses: [
-      "Computer Science",
       "Mathematics",
       "Physics",
       "Chemistry",
-      "English"
+      "English",
+      "Arabic"
     ],
     achievements: [
-      "Computer Science Topper",
       "Mathematics Excellence Award",
       "Perfect Attendance"
     ],
     skills: ["Analytical Thinking", "Mathematical Reasoning", "Scientific Method"],
-    logo: "/logos/KTHM.jpeg"
+    logo: "/logos/highschool.jpeg"
   },
   {
     id: 4,
     degree: "Secondary School Certificate",
     degreeShort: "SSC",
-    institution: "K. K. Wagh English School",
+    institution: "Ahmed Lotfy Elsayed Experimental Language School",
     location: "Nashik, Maharashtra",
-    year: "2010-2020",
+    year: "2005-2016",
     status: "Completed",
     score: "Distinction",
     scoreType: "Grade",
     level: "primary",
     showScore: false,
-    description: "Foundation education with emphasis on holistic development and academic excellence.",
+    description: "",
     courses: [
       "English Language",
       "Mathematics",
       "Science",
       "Social Studies",
-      "Hindi"
+      "Arabic"
     ],
     achievements: [
       "School Topper - Mathematics",
-      "Best Student Award",
-      "Sports Excellence - Cricket"
+      "Best Student Award"
     ],
     skills: ["Communication", "Critical Thinking", "Leadership"],
-    logo: "/logos/KKW.png"
+    logo: "/logos/secondaryschool.png"
   }
 ];
 
@@ -122,16 +120,16 @@ const Education = () => {
               <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2D2D2D] rounded-lg sm:rounded-xl p-3 sm:p-4 border border-gray-700/50">
                 <div className="flex items-center justify-center mb-2">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#3DDC84] mr-2" />
-                  <span className="text-lg sm:text-xl font-bold text-white">15+</span>
+                  <span className="text-lg sm:text-xl font-bold text-white">5+</span>
                 </div>
                 <p className="text-gray-400 text-xs sm:text-sm">Years of Education</p>
               </div>
               <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2D2D2D] rounded-lg sm:rounded-xl p-3 sm:p-4 border border-gray-700/50">
                 <div className="flex items-center justify-center mb-2">
                   <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#61DAFB] mr-2" />
-                  <span className="text-lg sm:text-xl font-bold text-white">8.5</span>
+                  <span className="text-lg sm:text-xl font-bold text-white">3.2</span>
                 </div>
-                <p className="text-gray-400 text-xs sm:text-sm">Current CGPA</p>
+                <p className="text-gray-400 text-xs sm:text-sm">Current GPA</p>
               </div>
               <div className="bg-gradient-to-br from-[#1E1E1E] to-[#2D2D2D] rounded-lg sm:rounded-xl p-3 sm:p-4 border border-gray-700/50 sm:col-span-1 col-span-1">
                 <div className="flex items-center justify-center mb-2">
