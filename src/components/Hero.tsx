@@ -28,7 +28,7 @@ const Hero = () => {
                   <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-[#3DDC84] shadow-2xl">
                     <img 
                       src="/profile-pic.png" 
-                      alt="Shriram Mange - Android Developer"
+                      alt="Mina - Android Developer"
                       className="w-full h-full object-cover"
                       loading="eager"
                     />
@@ -54,20 +54,19 @@ const Hero = () => {
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-gray-400 text-sm sm:text-base">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#3DDC84] flex-shrink-0" />
-                      <span>Nashik, Maharashtra, India</span>
+                      <span>Suez, Egypt</span>
                     </div>
                     <div className="hidden sm:block text-gray-600">•</div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-[#3DDC84] flex-shrink-0" />
-                      <span>Available for Projects</span>
+                      <span>Available for Work</span>
                     </div>
                   </div>
                 </div>
                 
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
                   Passionate Android developer with expertise in <strong className="text-[#3DDC84]">Kotlin</strong> and <strong className="text-[#3DDC84]">Jetpack Compose</strong>. 
-                  Crafting beautiful, performant mobile experiences and full-stack web solutions. 
-                  Currently working with leading tech companies to build innovative applications.
+                  Crafting beautiful, performant mobile experiences.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -85,7 +84,7 @@ const Hero = () => {
                     aria-label="Get in touch"
                   >
                     <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Get In Touch
+                    Get My Resume
                   </button>
                 </div>
                 
@@ -111,7 +110,7 @@ const Hero = () => {
               <div className="text-left space-y-6 py-16 z-10">
                 <div className="space-y-4">
                   <h1 className="text-6xl font-bold text-white leading-tight">
-                    Shriram Mange
+                    Mina Remon
                     <span className="block text-[#3DDC84] text-4xl mt-2">
                       Android Developer
                     </span>
@@ -120,20 +119,19 @@ const Hero = () => {
                   <div className="flex flex-row items-center gap-4 text-gray-400 text-base">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#3DDC84] flex-shrink-0" />
-                      <span>Nashik, Maharashtra, India</span>
+                      <span>Suez, Egypt</span>
                     </div>
                     <div className="text-gray-600">•</div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-[#3DDC84] flex-shrink-0" />
-                      <span>Available for Projects</span>
+                      <span>Available for Work</span>
                     </div>
                   </div>
                 </div>
                 
                 <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-                  Passionate Android developer with expertise in <strong className="text-[#3DDC84]">Kotlin</strong> and <strong className="text-[#3DDC84]">Jetpack Compose</strong>. 
-                  Crafting beautiful, performant mobile experiences and full-stack web solutions. 
-                  Currently working with leading tech companies to build innovative applications.
+                Passionate Android developer with expertise in <strong className="text-[#3DDC84]">Kotlin</strong> and <strong className="text-[#3DDC84]">Jetpack Compose</strong>. 
+                  Crafting beautiful, performant mobile experiences.
                 </p>
                 
                 <div className="flex flex-row gap-4 justify-start pt-4">
@@ -176,7 +174,7 @@ const Hero = () => {
                   <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-[#3DDC84] shadow-2xl">
                     <img 
                       src="/profile-pic.png" 
-                      alt="Shriram Mange - Android Developer"
+                      alt="Mina Remon - Android Developer"
                       className="w-full h-full object-cover"
                       loading="eager"
                     />
