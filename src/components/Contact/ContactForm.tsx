@@ -26,16 +26,20 @@ const ContactForm = () => {
     setError('');
 
     try {
-      // Add document to Firestore
-      await addDoc(collection(db, 'contact-messages'), {
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        message: formData.message.trim(),
-        timestamp: serverTimestamp(),
-        status: 'new',
-        userAgent: navigator.userAgent,
-        referrer: document.referrer || 'direct'
-      });
+      // Add document to Firestore if configured
+      if (db) {
+        await addDoc(collection(db, 'contact-messages'), {
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+          timestamp: serverTimestamp(),
+          status: 'new',
+          userAgent: navigator.userAgent,
+          referrer: document.referrer || 'direct'
+        });
+      } else {
+        console.warn('Firebase is not configured — skipping Firestore submission');
+      }
 
       // Send email notification using EmailJS
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;

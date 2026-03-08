@@ -1,7 +1,7 @@
 // Firebase configuration and initialization
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAnalytics } from 'firebase/analytics';
+import { initializeApp, type FirebaseApp } from 'firebase/app';
+import { getFirestore, type Firestore } from 'firebase/firestore';
+import { getAnalytics, type Analytics } from 'firebase/analytics';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -14,13 +14,24 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const isFirebaseConfigured = !!(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId);
 
-// Initialize Firestore
-export const db = getFirestore(app);
+let app: FirebaseApp | null = null;
+export let db: Firestore | null = null;
+export let analytics: Analytics | null = null;
 
-// Initialize Analytics (optional)
-export const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
+if (isFirebaseConfigured) {
+  try {
+    app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+    if (typeof window !== 'undefined') {
+      analytics = getAnalytics(app);
+    }
+  } catch (error) {
+    console.error('Firebase initialization failed:', error);
+  }
+} else {
+  console.warn('Firebase configuration is incomplete. Firebase features will be disabled.');
+}
 
 export default app;
