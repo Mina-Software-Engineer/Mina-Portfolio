@@ -4,147 +4,55 @@ import { Github, ExternalLink, PlayCircle, Globe, Smartphone, Cpu, FileText, Sca
 
 const projects = [
   {
-    title: "Zervista - Salon Management System",
-    description: "Comprehensive salon & parlour service management system with customer management, staff management, analytics, and inventory tracking",
-    image: "/projects/zervista.jpeg",
+    title: "Museum Guide",
+    description: "an interactive companion that lets visitors control a guide robot via an on-screen museum map. Users can ask questions through voice commands and receive AI-powered responses from the robot. The app also enables QR code scanning of exhibits to instantly display detailed information. It seamlessly blends physical navigation, and digital content for an enriched museum experience.",
+    image: "/logos/museumguide.png",
     icon: Smartphone,
-    techStack: ["Flutter", "Firebase", "Dart"],
-    metrics: { type: "Play Store", value: "Live App" },
-    features: ["Online Appointments", "Service Catalog", "Staff Management", "Analytics Dashboard"],
+    techStack: ["Room Database", "Clean Architecture", "Kotlin"],
+    metrics: { type: "Graduation Project" },
+    features: ["Enhanced UI", "Digital Content", "Accessibility"],
     links: {
-      playStore: "https://play.google.com/store/apps/details?id=com.zervista&pcampaignid=web_share",
-      github: "#"
+      github: "https://github.com/Mina-Software-Engineer/Museum-Guide-App"
     }
   },
   // Added projects from user request (inserted after Zervista)
   {
-    title: "MyDhruva Mentors",
-    description: "Mentorship and guidance platform with student‑centric content, showcasing programs, outcomes, and easy ways to get in touch.",
-    image: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80",
+    title: "Asteroid Radar",
+    description: "NASA API integration app displaying near-Earth asteroids with Room Database caching.",
+    image: "/projects/asteroid_logo.png",
     icon: Globe,
-    techStack: ["Modern Web Tech", "Responsive Design"],
-    metrics: { type: "Live Site", value: "Production" },
-    features: ["Mentorship Programs", "Student‑Centric UI", "Contact & Enquiry", "SEO Optimized"],
+    techStack: ["Modern UI", "Responsive Design"],
+    metrics: { type: "Project" },
+    features: ["Real-time update", "Asteroids sorting"],
     links: {
-      demo: "https://mydhruvamentors.com",
+      demo: "#",
       github: "#"
     }
   },
   {
-    title: "House of Deepak",
-    description: "Fashion brand website featuring Indian and Western wear collections with a refined, responsive shopping experience.",
-    image: "/projects/house of deepak.png",
-    icon: ShoppingCart,
-    techStack: ["React.js", "Tailwind CSS", "Firebase"],
-    metrics: { type: "Live Site", value: "Production" },
-    features: ["Indian & Western Collections", "Responsive E‑commerce UI", "About & Contact Pages", "Instagram Integration"],
+    title: "Quotes App",
+    description: "Daily inspiration app with quote sharing functionality and local database storage.",
+    image: "/projects/quoteslogo.png",
+    icon: Smartphone,
+    techStack: ["Room Database", "Kotlin", "RESTful API"],
+    metrics: { type: "Project" },
+    features: [""],
     links: {
-      demo: "https://houseofdeepak.in",
+      demo: "#",
       github: "#"
     }
   },
   {
-    title: "GTA Mods Collection",
-    description: "Curated collection of GTA game modifications and enhancements showcasing creative modding projects",
-    image: "/projects/gtamods.png",
-    icon: Globe,
-    techStack: ["Gaming", "Modding"],
-    metrics: { type: "Community", value: "GTA Mods" },
-    features: ["Game Modifications", "Enhancement Tools", "Community Driven", "Creative Mods"],
+    title: "Moonchat",
+    description: "Real-time messaging application with Firebase, Room Database",
+    image: "/projects/moonchat.jpeg",
+    icon: Smartphone,
+    techStack: ["Kotlin", "Firebase", "Room Database", "MVVM", "Pagination"],
+    metrics: { type: "Impact", value: "Accessibility" },
+    features: ["Modern UI", "Real-time messaging"],
     links: {
       github: "#",
-      demo: "https://gtamaharashtramods.in"
-    }
-  },
-  {
-    title: "Smart Assistant for Blind People",
-    description: "IoT-based smart assistant using Raspberry Pi for reading printed text with OCR technology and text-to-speech conversion",
-    image: "/projects/raspberry pi.jpeg",
-    icon: Cpu,
-    techStack: ["Raspberry Pi", "Python", "OCR", "IoT"],
-    metrics: { type: "Impact", value: "Accessibility" },
-    features: ["Text Recognition", "Audio Feedback", "Portable Design", "Voice Commands"],
-    links: {
-      github: "https://github.com/Shriram2005/Smart-Assistant-for-Blind-People-using-Raspberry-Pi",
       demo: "#"
-    }
-  },
-  {
-    title: "Barcode Product Scanner",
-    description: "E-Commerce Product Images Manager App with barcode scanning technology and inventory tracking system",
-    image: "/projects/barcode product scanner.jpeg",
-    icon: Scan,
-    techStack: ["Android", "Barcode Scanning", "Database"],
-    metrics: { type: "Features", value: "Inventory Mgmt" },
-    features: ["Barcode Scanning", "Product Database", "Image Management", "Inventory Control"],
-    links: {
-      github: "https://github.com/Shriram2005/Barcode-Product-Scanner",
-      demo: "#"
-    }
-  },
-  {
-    title: "Pdfdroid - PDF Toolkit",
-    description: "Comprehensive PDF management web application with multiple utility features including merge, split, compress, and convert functionality",
-    image: "/projects/pdfdroid.png",
-    icon: FileText,
-    techStack: ["Web Technologies", "PDF.js", "JavaScript"],
-    metrics: { type: "Live Site", value: "Production" },
-    features: ["PDF Editing", "File Conversion", "Compression Tools", "Batch Processing"],
-    links: {
-      demo: "https://pdfdroid.netlify.app",
-      github: "https://github.com/Shriram2005/Pdfdroid"
-    }
-  },
-  {
-    title: "MediScribe OCR",
-    description: "Medical Prescription Recognition System using Paddle OCR and Python to digitize handwritten prescriptions",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-    icon: Stethoscope,
-    techStack: ["Python", "Paddle OCR", "Database"],
-    metrics: { type: "Healthcare", value: "Medical AI" },
-    features: ["Text Recognition", "Medication Database", "Prescription History", "Export Functionality"],
-    links: {
-      github: "https://github.com/Shriram2005/MediScribe-OCR",
-      demo: "#"
-    }
-  },
-  {
-    title: "Calculator App",
-    description: "Mobile Calculator Application built with Kotlin and Jetpack Compose featuring modern UI design and smooth animations",
-    image: "/projects/calculator.jpeg",
-    icon: Calculator,
-    techStack: ["Kotlin", "Jetpack Compose", "Android"],
-    metrics: { type: "UI/UX", value: "Modern Design" },
-    features: ["Basic Arithmetic", "Modern UI", "Smooth Animations", "Responsive Layout"],
-    links: {
-      github: "https://github.com/Shriram2005/Calculator-App-Jetpack-Compose",
-      demo: "#"
-    }
-  },
-  {
-    title: "QR-Barcode Scanner App",
-    description: "Multi-Purpose Scanner Application using Jetpack Compose and Google ML Kit with real-time scanning capabilities",
-    image: "/projects/qr-barcode-scanner.png",
-    icon: QrCode,
-    techStack: ["Jetpack Compose", "Google ML Kit", "Kotlin"],
-    metrics: { type: "ML Kit", value: "Real-time" },
-    features: ["QR Code Scanning", "Barcode Recognition", "Multiple Formats", "Real-time Processing"],
-    links: {
-      github: "https://github.com/Shriram2005/QR-Barcode-Scanner-App",
-      demo: "#"
-    }
-  },
-  {
-    title: "Neutralise E-commerce",
-    description: "Modern E-Commerce Platform developed with modern web technologies and responsive design",
-    image: "/projects/neutralise.png",
-    icon: ShoppingCart,
-    techStack: ["Modern Web Tech", "Responsive Design"],
-    metrics: { type: "E-commerce", value: "Full Stack" },
-    features: ["Product Catalog", "User Management", "Shopping Cart", "Responsive Design"],
-    links: {
-      github: "https://github.com/Shriram2005/Neutralise",
-      demo: "https://shriram2005.github.io/Neutralise/"
     }
   }
 ];
@@ -163,7 +71,7 @@ const Projects = () => {
           <div className="text-center mb-16 relative z-10">
             <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              A showcase of innovative solutions spanning mobile apps, web applications, IoT devices, and AI-powered tools
+              A showcase of innovative solutions spanning mobile
             </p>
           </div>
         </ScrollReveal>
@@ -273,7 +181,7 @@ const Projects = () => {
         <ScrollReveal direction="up" duration={600} delay={300}>
           <div className="text-center mt-12 relative z-10">
             <a 
-              href="https://github.com/Shriram2005" 
+              href="https://github.com/Mina-Software-Engineer" 
               className="btn-primary inline-flex items-center gap-2 bg-[#3DDC84] text-black px-8 py-3 rounded-full font-medium"
               target="_blank"
               rel="noopener noreferrer"

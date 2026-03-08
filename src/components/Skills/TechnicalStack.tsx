@@ -3,15 +3,7 @@ import ScrollingRow, { TechItem } from './ScrollingRow';
 
 const TechnicalStack: React.FC = () => {
   // Define rows of technologies with icon + label
-  const row1: TechItem[] = [
-    { name: 'Nodejs', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg' },
-    { name: 'HTML5', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg' },
-    { name: 'CSS3', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg' },
-    { name: 'JavaScript', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' },
-    { name: 'Git', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg' },
-    { name: 'Supabase', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg' },
-    { name: 'React', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' },
-  ];
+   //<ScrollingRow items={row1} direction="left" speedSec={40} />
 
   const row2: TechItem[] = [
     { name: 'Tailwind', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg' },
@@ -38,14 +30,13 @@ const TechnicalStack: React.FC = () => {
       <div className="text-center mb-10">
         <h3 className="text-3xl font-bold text-white mb-3">Technical Expertise</h3>
         <p className="text-gray-400 max-w-2xl mx-auto">
-          A curated set of tools and technologies I use day-to-day across mobile and web.
+          A curated set of tools and technologies I use day-to-day across mobile app.
         </p>
       </div>
 
       <div className="space-y-6">
         <ScrollingRow items={row3} direction="left" speedSec={50} />
         <ScrollingRow items={row2} direction="right" speedSec={45} />
-        <ScrollingRow items={row1} direction="left" speedSec={40} />
       </div>
     </div>
   );

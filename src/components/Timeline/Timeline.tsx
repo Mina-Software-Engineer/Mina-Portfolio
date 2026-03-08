@@ -3,53 +3,17 @@ import TimelineItem from './TimelineItem';
 
 const timelineData = [
   {
-    company: "S.T.R.E.A.M. Edutech",
+    company: "Advanced Android Application Development",
     position: "Android Developer",
-    duration: "Sep 2024 - Feb 2025 · 6 mos",
-    location: "Mumbai, Maharashtra, India · Remote",
+    duration: "Sep 2022 - Nov 2022 · 3 mos",
+    location: "Cairo, Egypt · Online",
     achievements: [
-      "Developed native Android applications using Kotlin and Jetpack Compose",
+      "Developed native Android applications using Kotlin",
       "Implemented modern Android architecture patterns (MVVM, Clean Architecture)"
     ],
-    technologies: ["Kotlin", "Jetpack Compose", "Android SDK", "MVVM"],
-    logo: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+    technologies: ["Kotlin", "Firebase", "Android SDK", "MVVM", "Room Database"],
+    logo: "logos/Udacity.png"
   },
-  {
-    company: "Techentrance",
-    position: "Android Developer",
-    duration: "Aug 2024 - Jan 2025 · 6 mos",
-    location: "Nashik, Maharashtra, India · Remote",
-    achievements: [
-      "Built and maintained Android applications with focus on user experience",
-      "Integrated RESTful APIs and implemented data persistence solutions"
-    ],
-    technologies: ["Android Studio", "Java", "Kotlin", "Firebase"],
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    company: "Technohacks",
-    position: "Web Development Intern",
-    duration: "Aug 2023 - Sept 2023",
-    location: "Remote",
-    achievements: [
-      "Developed responsive web applications using modern frameworks",
-      "Implemented CI/CD pipelines for automated deployment"
-    ],
-    technologies: ["React", "Node.js", "TypeScript", "HTML/CSS"],
-    logo: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    company: "Lets Grow More",
-    position: "Web Development Intern",
-    duration: "Aug 2023 - Aug 2023",
-    location: "Remote",
-    achievements: [
-      "Built and maintained multiple client websites",
-      "Optimized website performance and SEO"
-    ],
-    technologies: ["JavaScript", "HTML/CSS", "WordPress", "Bootstrap"],
-    logo: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-  }
 ];
 
 const Timeline = () => {
@@ -67,7 +31,7 @@ const Timeline = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Professional Experience</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Building innovative Android applications and web solutions across diverse technology stacks
+              Building innovative Android applications across diverse technology stacks
             </p>
           </div>
         </ScrollReveal>

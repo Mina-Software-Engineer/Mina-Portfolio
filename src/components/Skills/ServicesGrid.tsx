@@ -6,19 +6,7 @@ const services = [
     icon: Smartphone,
     title: "Custom Mobile App Development",
     description: "Native Android applications with modern UI/UX and robust backend integration",
-    features: ["Jetpack Compose", "Material Design", "Firebase Integration", "Play Store Deployment"]
-  },
-  {
-    icon: Globe,
-    title: "Modern Web Solutions",
-    description: "Responsive web applications built with cutting-edge technologies",
-    features: ["React Development", "Progressive Web Apps", "API Integration", "Cloud Deployment"]
-  },
-  {
-    icon: Search,
-    title: "SEO Optimization",
-    description: "Improve your website's visibility and search engine rankings",
-    features: ["Technical SEO", "Performance Optimization", "Schema Markup", "Analytics Setup"]
+    features: [ "Material Design", "Firebase Integration", "Room Database", "SQLite", "RESTful API", "Kotlin Coroutines" ]
   },
   {
     icon: Palette,

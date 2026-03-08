@@ -24,11 +24,12 @@ const TimelineItem = ({
     <div className="bg-[#1E1E1E] rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#3DDC84] group">
       <div className="flex items-start gap-6">
         <div className="flex-shrink-0">
-          <img 
+        <a href="https://confirm.udacity.com/NY3UNGNV" className="social-link">
+        <img 
             src={logo} 
             alt={company} 
-            className="w-16 h-16 rounded-xl object-cover border-2 border-gray-700 group-hover:border-[#3DDC84] transition-colors duration-300"
-          />
+            className="w-16 h-16 rounded-xl object-cover border-2 border-gray-700 group-hover:border-[#3DDC84] transition-colors duration-300"/>
+          </a>
         </div>
         
         <div className="flex-1">

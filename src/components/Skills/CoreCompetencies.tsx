@@ -5,14 +5,8 @@ const competencies = [
   {
     icon: Smartphone,
     title: "Android Development",
-    description: "Native Android apps with Kotlin/Java, Jetpack Compose, and modern architecture patterns",
-    skills: ["Kotlin", "Java", "Jetpack Compose", "MVVM"]
-  },
-  {
-    icon: Globe,
-    title: "Full-Stack Web Development",
-    description: "End-to-end web solutions from responsive frontends to scalable backend systems",
-    skills: ["React", "PHP", "MySQL", "Firebase"]
+    description: "Native Android apps with Kotlin/Java and modern architecture patterns",
+    skills: ["Kotlin", "Java", "Repository Pattern", "MVVM", "Dependency Injection"]
   },
   {
     icon: Brain,
