@@ -24,31 +24,31 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
               <div className="space-y-4 mb-8">
-                <a href="https://wa.me/917821851927" className="contact-link">
+                <a href="https://wa.me/+201006950385" className="contact-link">
                   <MessageCircle className="w-5 h-5 contact-icon" />
-                  WhatsApp Chat
+                  WhatsApp
                 </a>
-                <a href="https://t.me/Shrirammange" className="contact-link">
+                <a href="https://t.me/Mina_Remon" className="contact-link">
                   <Send className="w-5 h-5 contact-icon" />
-                  Telegram: @Shrirammange
+                  Telegram: @Mina_Remon
                 </a>
-                <a href="mailto:mange.shriram@gmail.com" className="contact-link">
+                <a href="mailto:menaremon34@gmail.com" className="contact-link">
                   <Mail className="w-5 h-5 contact-icon" />
-                  mange.shriram@gmail.com
+                  menaremon34@gmail.com
                 </a>
               </div>
               <h3 className="text-2xl font-semibold text-white mb-6">Social Links</h3>
               <div className="flex gap-4">
-                <a href="https://github.com/Shriram2005" className="social-link">
+                <a href="https://github.com/Mina-Software-Engineer" className="social-link">
                   <Github className="w-6 h-6" />
                 </a>
                 <a href="https://linkedin.com/in/shriram-mange" className="social-link">
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="https://wa.me/917821851927" className="social-link">
+                <a href="https://wa.me/+201006950385" className="social-link">
                   <MessageCircle className="w-6 h-6" />
                 </a>
-                <a href="https://t.me/Shrirammange" className="social-link">
+                <a href="https://t.me/Mina_Remon" className="social-link">
                   <Send className="w-6 h-6" />
                 </a>
               </div>

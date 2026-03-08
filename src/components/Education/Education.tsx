@@ -5,44 +5,15 @@ import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
 
 const educationData = [
   {
-    id: 1,
-    degree: "Master of Computer Applications",
-    degreeShort: "MCA",
-    institution: "K.K. Wagh Institute of Engineering",
-    location: "Nashik, Maharashtra",
-    year: "2025-2027",
-    status: "Pursuing",
-    score: "Ongoing",
-    scoreType: "Status",
-    level: "postgraduate",
-    showScore: false,
-    description: "Advanced computer science program focusing on emerging technologies, research, and advanced software development methodologies.",
-    courses: [
-      "Advanced Algorithms",
-      "Advanced Database Systems",
-      "Web Services & Cloud Computing",
-      "Machine Learning",
-      "Software Architecture",
-      "Data Science"
-    ],
-    achievements: [
-      "Pursuing Advanced Studies in Computer Science",
-      "Focus on Industry-Ready Technologies",
-      "Research-Oriented Coursework"
-    ],
-    skills: ["Research", "Advanced Problem Solving", "Technical Leadership"],
-    logo: "/logos/KKW.png"
-  },
-  {
     id: 3,
     degree: "Bachelor of Computer Applications",
     degreeShort: "BCA",
-    institution: "Sandip University",
-    location: "Nashik, Maharashtra",
-    year: "2022-2025",
+    institution: "Modern Academy",
+    location: "Maadi, Cairo",
+    year: "2020-2024",
     status: "Completed",
-    score: "8.5 GPA",
-    scoreType: "CGPA",
+    score: "3.2 GPA",
+    scoreType: "GPA",
     level: "undergraduate",
     showScore: true,
     description: "Comprehensive computer science program focusing on modern software development practices and emerging technologies.",

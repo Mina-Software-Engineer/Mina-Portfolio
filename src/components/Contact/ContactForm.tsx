@@ -55,7 +55,7 @@ const ContactForm = () => {
               from_name: formData.name.trim(),
               from_email: formData.email.trim(),
               message: formData.message.trim(),
-              to_email: 'shrirammange12345@gmail.com',
+              to_email: 'menaremon34@gmail.com',
               reply_to: formData.email.trim(),
             },
             publicKey
@@ -108,7 +108,7 @@ const ContactForm = () => {
           <p>You can also reach me directly via:</p>
           <div className="flex justify-center gap-4 mt-2">
             <a 
-              href="https://wa.me/917821851927" 
+              href="https://wa.me/+201006950385" 
               className="text-[#3DDC84] hover:underline"
               target="_blank"
               rel="noopener noreferrer"
@@ -116,7 +116,7 @@ const ContactForm = () => {
               WhatsApp
             </a>
             <a 
-              href="https://t.me/Shrirammange" 
+              href="https://t.me/Mina_Remon" 
               className="text-[#3DDC84] hover:underline"
               target="_blank"
               rel="noopener noreferrer"
