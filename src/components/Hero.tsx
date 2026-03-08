@@ -91,7 +91,7 @@ const Hero = () => {
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-8 sm:gap-12 pt-8 mt-8 border-t border-gray-700 max-w-md mx-auto">
                   <div className="text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-[#3DDC84] mb-1">15+</div>
+                    <div className="text-xl sm:text-2xl font-bold text-[#3DDC84] mb-1">5+</div>
                     <div className="text-gray-400 text-xs sm:text-sm">Projects</div>
                   </div>
                   <div className="text-center">
@@ -173,7 +173,7 @@ const Hero = () => {
                 <div className="relative">
                   <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-[#3DDC84] shadow-2xl">
                     <img 
-                      src="/profile-pic.png" 
+                      src="/profile-pic.jpg" 
                       alt="Mina Remon - Android Developer"
                       className="w-full h-full object-cover"
                       loading="eager"
