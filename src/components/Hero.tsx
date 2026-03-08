@@ -27,7 +27,7 @@ const Hero = () => {
                 <div className="relative">
                   <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-[#3DDC84] shadow-2xl">
                     <img 
-                      src="/profile-pic.png" 
+                      src="/profile-pic.jpg" 
                       alt="Mina - Android Developer"
                       className="w-full h-full object-cover"
                       loading="eager"
