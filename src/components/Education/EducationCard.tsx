@@ -185,10 +185,12 @@ const EducationCard = ({
 
                 {/* Quick Skills Preview - Mobile Responsive */}
                 <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-                  {skills.slice(0, window.innerWidth < 640 ? 2 : 3).map((skill, skillIndex) => (
+                  {skills.slice(0, 3).map((skill, skillIndex) => (
                     <span 
                       key={skillIndex}
-                      className="px-2 sm:px-3 py-1 rounded-full text-xs font-medium border"
+                      className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium border ${
+                        skillIndex > 1 ? 'hidden sm:inline-flex' : ''
+                      }`}
                       style={{ 
                         backgroundColor: `${levelColor}10`,
                         color: levelColor,

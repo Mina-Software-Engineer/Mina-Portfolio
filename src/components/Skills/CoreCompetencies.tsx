@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Globe, Brain } from 'lucide-react';
+import { Smartphone, Brain } from 'lucide-react';
 
 const competencies = [
   {
