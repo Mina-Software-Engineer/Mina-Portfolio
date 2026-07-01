@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
-import { Github, ExternalLink, PlayCircle, Globe, Smartphone, Cpu, FileText, Scan, Stethoscope, Calculator, QrCode, ShoppingCart } from 'lucide-react';
+import { Github, ExternalLink, PlayCircle, Globe, Smartphone } from 'lucide-react';
 
 const projects = [
   {
