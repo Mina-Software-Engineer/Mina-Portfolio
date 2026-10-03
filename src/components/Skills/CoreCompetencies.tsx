@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Brain } from 'lucide-react';
+import { Smartphone, Brain, Globe, Cloud, Database, MapPin, Layers, ScanText, Monitor, GitBranch } from 'lucide-react';
 
 const competencies = [
   {
@@ -13,6 +13,123 @@ const competencies = [
     title: "Problem-Solving & Architecture",
     description: "Clean code architecture, design patterns, and efficient algorithm implementation",
     skills: ["Clean Architecture", "Design Patterns", "DSA", "OOP"]
+  },
+  {
+    icon: Smartphone,
+    title: "Modern Android UI Development",
+    description:
+      "Building polished, responsive Android interfaces with modern UI frameworks and navigation patterns",
+    skills: [
+      "Jetpack Compose",
+      "XML Layouts",
+      "Material Design 3",
+      "Navigation Component",
+      "Coroutines & Flow"
+    ]
+  },
+  {
+    icon: Globe,
+    title: "Backend & API Integration",
+    description:
+      "Integrating mobile applications with RESTful services, authentication systems, and external APIs",
+    skills: [
+      "REST APIs",
+      "Retrofit",
+      "OkHttp",
+      "JSON Serialization",
+      "OAuth 2.0"
+    ]
+  },
+  {
+    icon: Cloud,
+    title: "Cloud & Real-Time Services",
+    description:
+      "Implementing cloud-backed features, user authentication, and real-time application updates",
+    skills: [
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Firebase Cloud Messaging",
+      "Cloud Storage",
+      "Real-Time Data"
+    ]
+  },
+  {
+    icon: Database,
+    title: "Database & Data Management",
+    description:
+      "Designing data models, managing persistent storage, and supporting offline-first experiences",
+    skills: [
+      "Room Database",
+      "SQLite",
+      "MySQL",
+      "Data Caching",
+      "Data Synchronization"
+    ]
+  },
+  {
+    icon: MapPin,
+    title: "Maps & Location Services",
+    description:
+      "Developing location-aware features for navigation, delivery, and ride-hailing applications",
+    skills: [
+      "Google Maps SDK",
+      "Mapbox",
+      "Location Services",
+      "Geocoding",
+      "Route Visualization"
+    ]
+  },
+  {
+    icon: Layers,
+    title: "Cross-Platform Development",
+    description:
+      "Building cross-platform mobile applications with reusable UI components and shared logic",
+    skills: [
+      "Flutter",
+      "Dart",
+      "State Management",
+      "Reusable Widgets",
+      "Responsive UI"
+    ]
+  },
+  {
+    icon: ScanText,
+    title: "OCR & Workflow Automation",
+    description:
+      "Automating document processing, extracting information from images, and validating business data",
+    skills: [
+      "OCR",
+      "Image Processing",
+      "Data Validation",
+      "Excel Automation",
+      "Automated Reporting"
+    ]
+  },
+  {
+    icon: Monitor,
+    title: "Desktop Application Development",
+    description:
+      "Creating desktop software for business workflows, data processing, and operational automation",
+    skills: [
+      "Python",
+      "C#",
+      "C++",
+      "File Processing",
+      "Business Automation"
+    ]
+  },
+  {
+    icon: GitBranch,
+    title: "Development Tools & Quality",
+    description:
+      "Applying version control, testing, debugging, and collaborative engineering practices",
+    skills: [
+      "Git",
+      "GitHub",
+      "Debugging",
+      "Unit Testing",
+      "Agile Development"
+    ]
   }
 ];
 
