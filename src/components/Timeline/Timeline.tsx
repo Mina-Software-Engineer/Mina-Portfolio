@@ -3,17 +3,62 @@ import TimelineItem from './TimelineItem';
 
 const timelineData = [
   {
+    company: "Next Gen Institute",
+    position: "Flutter Development Intern",
+    duration: "Sep 2026 - Present",
+    location: "Egypt · Internship",
+    achievements: [
+      "Participating in a Flutter development internship focused on cross-platform mobile application development",
+      "Developing practical skills in Dart, reusable UI components, and mobile application architecture"
+    ],
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Mobile Development",
+      "Git"
+    ],
+    logo: "logos/next-gen-institute.jpg"
+  },
+  {
+    company: "Edita Food Industries",
+    position: "Freelance Software Developer",
+    duration: "2026 · Freelance Project",
+    location: "Egypt · Project-based",
+    achievements: [
+      "Developed a desktop application for the accounting department to automate the processing and validation of InstaPay receipts",
+      "Implemented OCR-based data extraction and validation to verify account details and detect duplicate receipt numbers",
+      "Automated structured Excel reporting to streamline accounting workflows",
+      "Worked on an Android version of the application to extend the solution to mobile devices"
+    ],
+    technologies: [
+      "Python",
+      "OCR",
+      "Image Processing",
+      "Excel Automation",
+      "Data Validation",
+      "Android Development"
+    ],
+    logo: "logos/edita.jpg"
+  },
+  {
     company: "Advanced Android Application Development",
     position: "Android Developer",
     duration: "Sep 2022 - Nov 2022 · 3 mos",
     location: "Cairo, Egypt · Online",
     achievements: [
       "Developed native Android applications using Kotlin",
-      "Implemented modern Android architecture patterns (MVVM, Clean Architecture)"
+      "Implemented modern Android architecture patterns, including MVVM and Clean Architecture",
+      "Worked with Firebase and Room Database for data management and persistence"
     ],
-    technologies: ["Kotlin", "Firebase", "Android SDK", "MVVM", "Room Database"],
+    technologies: [
+      "Kotlin",
+      "Firebase",
+      "Android SDK",
+      "MVVM",
+      "Room Database"
+    ],
     logo: "logos/Udacity.png"
-  },
+  }
 ];
 
 const Timeline = () => {
