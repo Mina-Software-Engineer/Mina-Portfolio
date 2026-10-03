@@ -43,7 +43,7 @@ const timelineData = [
   {
     company: "Advanced Android Application Development",
     position: "Android Developer",
-    duration: "Sep 2022 - Nov 2022 · 3 mos",
+    duration: "Sep 2022 - Nov 2022 · 3 months",
     location: "Cairo, Egypt · Online",
     achievements: [
       "Developed native Android applications using Kotlin",
@@ -57,7 +57,8 @@ const timelineData = [
       "MVVM",
       "Room Database"
     ],
-    logo: "logos/Udacity.png"
+    logo: "logos/Udacity.png",
+    logoLink: "https://www.udacity.com/certificate/NY3UNGNV"
   }
 ];
 

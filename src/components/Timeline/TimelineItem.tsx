@@ -9,28 +9,46 @@ interface TimelineItemProps {
   achievements: string[];
   technologies: string[];
   logo: string;
+  logoLink?: string;
 }
 
-const TimelineItem = ({ 
-  company, 
-  position, 
-  duration, 
+const TimelineItem = ({
+  company,
+  position,
+  duration,
   location,
-  achievements, 
+  achievements,
   technologies,
-  logo 
+  logo,
+  logoLink
 }: TimelineItemProps) => {
   return (
     <div className="bg-[#1E1E1E] rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#3DDC84] group">
       <div className="flex items-start gap-6">
-        <div className="flex-shrink-0">
-        <a href="https://confirm.udacity.com/NY3UNGNV" className="social-link">
-        <img 
-            src={logo} 
-            alt={company} 
-            className="w-16 h-16 rounded-xl object-cover border-2 border-gray-700 group-hover:border-[#3DDC84] transition-colors duration-300"/>
-          </a>
-        </div>
+        
+    <div className="flex-shrink-0">
+      {logoLink ? (
+        <a
+          href={logoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link inline-block"
+          aria-label={`View ${company} reference`}
+        >
+          <img
+            src={logo}
+            alt={`${company} logo`}
+            className="!w-20 !h-20 block aspect-square rounded-xl object-contain bg-white p-1 border-2 border-gray-700 group-hover:border-[#3DDC84] transition-colors duration-300"
+          />
+        </a>
+      ) : (
+        <img
+          src={logo}
+          alt={`${company} logo`}
+          className="!w-20 !h-20 block aspect-square rounded-xl object-contain bg-white p-1 border-2 border-gray-700"
+        />
+      )}
+    </div>
         
         <div className="flex-1">
           <div className="mb-4">
