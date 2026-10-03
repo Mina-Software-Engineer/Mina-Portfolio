@@ -57,7 +57,8 @@ const timelineData = [
       "MVVM",
       "Room Database"
     ],
-    logo: "logos/Udacity.png"
+    logo: "logos/Udacity.png",
+    logoLink: "https://www.udacity.com/certificate/NY3UNGNV"
   }
 ];
 
