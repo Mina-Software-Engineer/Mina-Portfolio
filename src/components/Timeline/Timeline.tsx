@@ -41,8 +41,8 @@ const timelineData = [
     logo: "logos/edita.jpg"
   },
   {
-    company: "Advanced Android Application Development",
-    position: "Android Developer",
+    company: "Udacity Course",
+    position: "Advanced Android Kotlin Development",
     duration: "Sep 2022 - Nov 2022 · 3 months",
     location: "Cairo, Egypt · Online",
     achievements: [
@@ -57,7 +57,8 @@ const timelineData = [
       "MVVM",
       "Room Database"
     ],
-    logo: "logos/Udacity.png"
+    logo: "logos/Udacity.jpg",
+    logoLink: "https://www.udacity.com/certificate/NY3UNGNV"
   }
 ];
 
