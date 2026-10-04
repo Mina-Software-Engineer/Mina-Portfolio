@@ -171,9 +171,8 @@ export const projects: Project[] = [
       'Expand the social layer with richer friend discovery and suggestions',
       'Improve testing, performance monitoring, and production readiness'
     ]
-    
     }
-    }
+  },
   {
     slug: 'receiptmanager',
     title: 'Receipt Management System',
