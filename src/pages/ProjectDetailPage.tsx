@@ -117,44 +117,6 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
               <DetailSection title="Overview" text={project.detail.overview} />
               <DetailSection title="The challenge" text={project.detail.challenge} />
               <DetailSection title="The solution" text={project.detail.solution} />
-              {screenshots.length > 0 && (
-                <section>
-                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#3DDC84]">App screens</p>
-                  <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-                    <h2 className="text-3xl font-bold">Inside {project.title}</h2>
-                    <p className="text-sm text-gray-500">Select an image to explore</p>
-                  </div>
-                  <div className="moonchat-gallery-scroll flex w-full max-w-full snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
-                    {screenshots.map((screenshot, index) => (
-                      <button
-                        key={screenshot.src}
-                        type="button"
-                        onClick={() => setActiveScreenshot(index)}
-                        className="group relative aspect-[16/10] w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] text-left shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-[#3DDC84]/60 hover:shadow-[#3DDC84]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] sm:w-[calc((100%-1.25rem)/2)]"
-                        aria-label={`Open ${screenshot.caption}`}
-                      >
-                        <img
-                          src={screenshot.src}
-                          alt=""
-                          aria-hidden="true"
-                          className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-xl transition duration-500 group-hover:scale-125"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/30" />
-                        <img
-                          src={screenshot.src}
-                          alt={screenshot.alt}
-                          className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.03] sm:p-5"
-                          loading="lazy"
-                        />
-                        <span className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/80 to-transparent px-4 pb-4 pt-10 text-sm font-medium text-gray-200">
-                          {screenshot.caption}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                </section>
-              )}
               <section>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#3DDC84]">Your next additions</p>
                 <h2 className="mb-5 text-3xl font-bold">Make this page yours</h2>
@@ -168,6 +130,44 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
               </section>
             </div>
           </div>
+          {screenshots.length > 0 && (
+            <section className="mt-16">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#3DDC84]">App screens</p>
+              <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+                <h2 className="text-3xl font-bold">Inside {project.title}</h2>
+                <p className="text-sm text-gray-500">Select an image to explore</p>
+              </div>
+              <div className="moonchat-gallery-scroll flex w-full max-w-full snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
+                {screenshots.map((screenshot, index) => (
+                  <button
+                    key={screenshot.src}
+                    type="button"
+                    onClick={() => setActiveScreenshot(index)}
+                    className="group relative aspect-[16/10] w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] text-left shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-[#3DDC84]/60 hover:shadow-[#3DDC84]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] sm:w-[calc((100%-1.25rem)/2)]"
+                    aria-label={`Open ${screenshot.caption}`}
+                  >
+                    <img
+                      src={screenshot.src}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-xl transition duration-500 group-hover:scale-125"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/30" />
+                    <img
+                      src={screenshot.src}
+                      alt={screenshot.alt}
+                      className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.03] sm:p-5"
+                      loading="lazy"
+                    />
+                    <span className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/80 to-transparent px-4 pb-4 pt-10 text-sm font-medium text-gray-200">
+                      {screenshot.caption}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
         </section>
       
 
