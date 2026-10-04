@@ -31,6 +31,158 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: 'moonchat',
+    
+    title: 'MoonChat',
+    
+    description: 'A modern native Android messaging app built for real-time conversations, friend discovery, and reliable communication with offline support.',
+    
+    image: '/projects/moonchat_logo.png',
+    screenshots: [
+      {
+        src: '/projects/moonchat-welcome.webp',
+        alt: 'Moon Chat welcome screen shown on a tilted phone',
+        caption: 'Splash screen · Moon Chat',
+      },
+    ],
+    icon: Smartphone,
+    
+    techStack: [
+    'Kotlin',
+    'Android SDK',
+    'Firebase Authentication',
+    'Firebase Realtime Database',
+    'Cloud Firestore',
+    'Firebase Cloud Messaging',
+    'Room Database',
+    'Android Paging',
+    'Coroutines',
+    'RecyclerView'
+    ],
+    
+    metrics: {
+    type: 'Focus',
+    value: 'Real-time messaging'
+    },
+    
+    features: [
+    'Real-time one-to-one messaging',
+    'Optimistic message sending with offline queuing and automatic retry',
+    'Paginated chat history with local Room caching',
+    'Delivered and read message states',
+    'Friend requests with accept/reject interactions',
+    'Push notifications for messages and friend activity',
+    'User presence and network connectivity handling',
+    'Chat history and unread-message management'
+    ],
+    
+    links: {
+    github: 'https://github.com/Mina-Software-Engineer/MoonChatRepo'
+    },
+    
+    detail: {
+    eyebrow: 'Android · Real-time communication',
+    
+    intro: 'MoonChat is a native Android messaging experience designed around fast, dependable communication. I focused on making conversations feel immediate while keeping message history available locally and maintaining reliable synchronization with Firebase.',
+    
+    role: 'Solo Android Developer — responsible for application architecture, UI implementation, Firebase integration, local data persistence, real-time synchronization, notifications, and messaging reliability.',
+    
+    duration: 'Ongoing personal project',
+    
+    category: 'Mobile application',
+    
+    overview: 'MoonChat was designed for users who want a straightforward, modern messaging experience for private conversations and building a personal network. The goal was to combine a clean chat interface with the reliability users expect from a real-world messaging application, including persistent conversations, friend management, delivery/read states, notifications, and graceful behavior when connectivity is unstable.',
+    
+    challenge: 'The main challenge was keeping conversations consistent across local storage, Firebase, and real-time updates without making the interface feel slow or fragile. The app also needed to handle large chat histories efficiently, distinguish sent and received messages, prevent duplicate real-time events, preserve messages during connectivity loss, and notify users when activity happens outside the active conversation.',
+    
+    solution: 'I built a layered Android architecture around Kotlin, using Room as the local source for cached chat data and Firebase Realtime Database/Firestore for remote communication and user data. Android Paging with a RemoteMediator loads conversation history incrementally instead of pulling the entire chat at once. Message sending uses optimistic local updates, allowing messages to appear immediately while pending or failed messages are automatically synchronized when connectivity returns. Real-time Firebase listeners update incoming messages and delivery/read states, while Firebase Cloud Messaging handles push notifications for chat messages and friend-request events.',
+    
+    nextSteps: [
+      'Continue refining synchronization and message delivery reliability',
+      'Expand the social layer with richer friend discovery and suggestions',
+      'Improve testing, performance monitoring, and production readiness'
+    ]
+    }
+  },
+  {
+    slug: 'wassalny',
+  
+    title: 'Wassalny',
+  
+    description: 'A native Android ride-hailing application that connects riders with drivers through real-time trip requests, location tracking, route navigation, and trip status updates.',
+  
+    image: '/projects/wassalny_logo.png',
+  
+    icon: Smartphone,
+  
+    techStack: [
+      'Kotlin',
+      'Android SDK',
+      'Firebase Authentication',
+      'Firebase Realtime Database',
+      'Cloud Firestore',
+      'Firebase Cloud Messaging',
+      'Mapbox Maps SDK',
+      'Mapbox Navigation SDK',
+      'Mapbox Search SDK',
+      'Google Maps & Places SDK',
+      'GeoFire',
+      'Android Jetpack Navigation',
+      'Material Design',
+      'Coroutines',
+      'Cloudinary'
+    ],
+  
+    metrics: {
+      type: 'Core capability',
+      value: 'Real-time ride matching'
+    },
+  
+    features: [
+      'Dedicated rider and driver experiences',
+      'Real-time ride requests and trip status updates',
+      'Geospatial discovery of nearby available drivers',
+      'Live driver location tracking',
+      'Interactive maps with pickup and destination selection',
+      'Place search, autocomplete, and location lookup',
+      'Route visualization and turn-by-turn navigation',
+      'Trip distance and fare estimation in EGP',
+      'Driver onboarding and document verification',
+      'Push notifications for trip-related updates',
+      'Driver online status and active-trip management',
+      'Profile management and profile picture uploads'
+    ],
+  
+    links: {
+      github: 'https://github.com/Mina-Software-Engineer/Wassalny'
+    },
+  
+    detail: {
+      eyebrow: 'Android · Mobility & Location-Based Services',
+  
+      intro: 'Wassalny is a native Android ride-hailing application built to simplify the journey from requesting a ride to reaching a destination. It combines real-time location services, interactive maps, driver discovery, and trip coordination in a unified mobile experience.',
+  
+      role: 'Android Developer — responsible for native application development, rider and driver workflows, map integration, real-time Firebase communication, location tracking, navigation, and driver verification.',
+  
+      duration: 'Ongoing development',
+  
+      category: 'Android application',
+  
+      overview: 'Wassalny was designed for riders who need a convenient way to request transportation and drivers who need a dedicated interface to receive requests and manage trips. The goal was to build more than a map-based booking screen: the application coordinates both sides of a ride, from selecting pickup and destination points to matching drivers, tracking progress, and managing trip completion.',
+  
+      challenge: 'The central challenge was coordinating riders, drivers, location updates, and trip states in real time. The application needed to discover nearby drivers efficiently, keep trip information synchronized across both user experiences, handle driver availability and active trips, and present clear routes and pickup locations without making the interface difficult to navigate.',
+  
+      solution: 'I developed the application natively with Kotlin, using a fragment-based UI and Android Jetpack Navigation to organize the rider and driver flows. Firebase Authentication handles user identity, while Firebase Realtime Database coordinates trip requests, driver locations, driver availability, and active-trip state. GeoFire supports location-based driver discovery. Mapbox provides interactive maps, place search, route rendering, and navigation, while Google Maps and Places SDKs provide additional mapping and location-service integration. Firebase Cloud Messaging handles trip-related push notifications, and Cloudinary supports profile-image uploads.',
+  
+      nextSteps: [
+        'Refine driver matching, location update efficiency, and trip-state synchronization',
+        'Expand trip lifecycle handling with stronger error recovery and reconnection behavior',
+        'Improve automated testing for rider, driver, and navigation workflows',
+        'Evaluate matching performance, route accuracy, and end-to-end ride completion'
+      ]
+    }
+  },
+  {
     slug: 'museum-guide',
     title: 'Museum Guide',
     description:
@@ -98,80 +250,6 @@ export const projects: Project[] = [
       solution: 'Add how the interface, local storage, and API integration work together.',
       nextSteps: ['Add a visual walkthrough', 'Add your responsibilities', 'Add measurable results'],
     },
-  },
-  {
-    slug: 'moonchat',
-    
-    title: 'MoonChat',
-    
-    description: 'A modern native Android messaging app built for real-time conversations, friend discovery, and reliable communication with offline support.',
-    
-    image: '/projects/moonchat.png',
-    screenshots: [
-      {
-        src: '/projects/moonchat-welcome.webp',
-        alt: 'Moon Chat welcome screen shown on a tilted phone',
-        caption: 'Welcome screen · Moon Chat',
-      },
-    ],
-    icon: Smartphone,
-    
-    techStack: [
-    'Kotlin',
-    'Android SDK',
-    'Firebase Authentication',
-    'Firebase Realtime Database',
-    'Cloud Firestore',
-    'Firebase Cloud Messaging',
-    'Room Database',
-    'Android Paging',
-    'Coroutines',
-    'RecyclerView'
-    ],
-    
-    metrics: {
-    type: 'Focus',
-    value: 'Real-time messaging'
-    },
-    
-    features: [
-    'Real-time one-to-one messaging',
-    'Optimistic message sending with offline queuing and automatic retry',
-    'Paginated chat history with local Room caching',
-    'Delivered and read message states',
-    'Friend requests with accept/reject interactions',
-    'Push notifications for messages and friend activity',
-    'User presence and network connectivity handling',
-    'Chat history and unread-message management'
-    ],
-    
-    links: {
-    github: 'https://github.com/Mina-Software-Engineer/MoonChatRepo'
-    },
-    
-    detail: {
-    eyebrow: 'Android · Real-time communication',
-    
-    intro: 'MoonChat is a native Android messaging experience designed around fast, dependable communication. I focused on making conversations feel immediate while keeping message history available locally and maintaining reliable synchronization with Firebase.',
-    
-    role: 'Solo Android Developer — responsible for application architecture, UI implementation, Firebase integration, local data persistence, real-time synchronization, notifications, and messaging reliability.',
-    
-    duration: 'Ongoing personal project',
-    
-    category: 'Mobile application',
-    
-    overview: 'MoonChat was designed for users who want a straightforward, modern messaging experience for private conversations and building a personal network. The goal was to combine a clean chat interface with the reliability users expect from a real-world messaging application, including persistent conversations, friend management, delivery/read states, notifications, and graceful behavior when connectivity is unstable.',
-    
-    challenge: 'The main challenge was keeping conversations consistent across local storage, Firebase, and real-time updates without making the interface feel slow or fragile. The app also needed to handle large chat histories efficiently, distinguish sent and received messages, prevent duplicate real-time events, preserve messages during connectivity loss, and notify users when activity happens outside the active conversation.',
-    
-    solution: 'I built a layered Android architecture around Kotlin, using Room as the local source for cached chat data and Firebase Realtime Database/Firestore for remote communication and user data. Android Paging with a RemoteMediator loads conversation history incrementally instead of pulling the entire chat at once. Message sending uses optimistic local updates, allowing messages to appear immediately while pending or failed messages are automatically synchronized when connectivity returns. Real-time Firebase listeners update incoming messages and delivery/read states, while Firebase Cloud Messaging handles push notifications for chat messages and friend-request events.',
-    
-    nextSteps: [
-      'Continue refining synchronization and message delivery reliability',
-      'Expand the social layer with richer friend discovery and suggestions',
-      'Improve testing, performance monitoring, and production readiness'
-    ]
-    }
   },
   {
     slug: 'receiptmanager',
