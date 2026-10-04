@@ -34,7 +34,12 @@ const Navbar = () => {
             className="text-[#3DDC84] font-bold text-xl hover:text-white transition-colors"
             aria-label="Go to top of page"
           >
-            Mina Remon
+            <img 
+              src= {"/logos/my_logo.jpg"}
+              alt="Action icon" 
+              width={20} 
+              height={20} 
+            />
           </button>
           
           {/* Desktop Navigation */}
