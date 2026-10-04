@@ -143,7 +143,7 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
                     key={screenshot.src}
                     type="button"
                     onClick={() => setActiveScreenshot(index)}
-                    className="group relative aspect-square w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] text-left shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-[#3DDC84]/60 hover:shadow-[#3DDC84]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] sm:w-[calc((100%-2.5rem)/2)] lg:w-[calc(30.5%-1.6rem)]"
+                    className="group relative aspect-[16/10] w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] text-left shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-[#3DDC84]/60 hover:shadow-[#3DDC84]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] sm:w-[calc((100%-2.5rem)/2)] lg:w-[calc(30.5%-1.6rem)]"
                     aria-label={`Open ${screenshot.caption}`}
                   >
                     <img
