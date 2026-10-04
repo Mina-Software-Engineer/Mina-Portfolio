@@ -42,7 +42,43 @@ export const projects: Project[] = [
       {
         src: '/projects/moonchat-welcome.webp',
         alt: 'Moon Chat welcome screen shown on a tilted phone',
+        caption: 'Splash screen · MoonChat',
+      },
+      {
+        src: '/projects/chat_list_screen.png',
+        alt: 'MoonChat chat list screen shown on a phone',
+        caption: 'Chat list screen · MoonChat',
+      },
+      {
+        src: '/projects/full_chat_screen.png',
+        alt: 'MoonChat full chat screen shown on a phone',
+        caption: 'Full chat screen · MoonChat',
+      },
+    
+      {
+        src: '/projects/chat_list_screen.png',
+        alt: 'MoonChat chat list screen shown on a phone',
         caption: 'Splash screen · Moon Chat',
+      },
+      {
+        src: '/projects/friend_request_screen.png',
+        alt: 'MoonChat friend request screens list screen shown on a phone',
+        caption: 'Friend request screens · MoonChat',
+      },
+      {
+        src: '/projects/login_screen.png',
+        alt: 'MoonChat login screen shown on a phone',
+        caption: 'Login screen · MoonChat',
+      },
+      {
+        src: '/projects/signup_screen.png',
+        alt: 'MoonChat sign up screen shown on a phone',
+        caption: 'Sign up screen · MoonChat',
+      },
+      {
+        src: '/projects/profile_screen.png',
+        alt: 'MoonChat profile screen shown on a phone',
+        caption: 'Profile screen · MoonChat',
       },
     ],
     icon: Smartphone,
