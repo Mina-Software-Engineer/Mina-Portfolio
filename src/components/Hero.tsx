@@ -47,14 +47,14 @@ const Hero = () => {
                   <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
                     Mina Remon
                     <span className="block text-[#3DDC84] text-xl sm:text-2xl mt-2">
-                      Android Developer
+                      Mobile App Developer
                     </span>
                   </h1>
                   
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-gray-400 text-sm sm:text-base">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#3DDC84] flex-shrink-0" />
-                      <span>Suez, Egypt</span>
+                      <span>Cairo, Egypt</span>
                     </div>
                     <div className="hidden sm:block text-gray-600">•</div>
                     <div className="flex items-center gap-2">
@@ -65,8 +65,8 @@ const Hero = () => {
                 </div>
                 
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-                  Passionate Android developer with expertise in <strong className="text-[#3DDC84]">Kotlin</strong> and <strong className="text-[#3DDC84]">Jetpack Compose</strong>. 
-                  Crafting beautiful, performant mobile experiences.
+                  Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Kotlin, Jetpack Compose</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
+                    Crafting beautiful, performant mobile experiences.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -84,7 +84,7 @@ const Hero = () => {
                     aria-label="Get in touch"
                   >
                     <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Get My Resume
+                    Get In Touch
                   </button>
                 </div>
                 
