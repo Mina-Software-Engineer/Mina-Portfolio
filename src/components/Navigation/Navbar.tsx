@@ -36,8 +36,8 @@ const Navbar = () => {
           >
             <img 
               src= "./logos/my_logo.jpg"
-              width={50} 
-              height={50} 
+              width={30} 
+              height={30} 
               alt="Action icon" 
             />
           </button>
