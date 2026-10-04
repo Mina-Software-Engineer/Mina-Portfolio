@@ -18,59 +18,57 @@ const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-
-  if (isSubmitting) return;
-
-  setIsSubmitting(true);
-  setError('');
-
-  try {
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      throw new Error(
-        'Email service is not configured. Please try again later.'
-      );
-    }
-
-    await emailjs.send(
-      serviceId,
-      templateId,
-      {
-        from_name: formData.name.trim(),
-        from_email: formData.email.trim(),
-        message: formData.message.trim(),
-        to_email: 'menaremon34@gmail.com',
-        reply_to: formData.email.trim(),
-      },
-      {
-        publicKey,
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    if (isSubmitting) return;
+  
+    setIsSubmitting(true);
+    setError('');
+  
+    try {
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing.');
       }
-    );
-
-    setIsSubmitted(true);
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
-
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 5000);
-  } catch (err) {
-    console.error('Contact form submission failed:', err);
-    setError(
-      'Unable to send your message. Please try again or contact me directly via email.'
-    );
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name.trim(),
+          from_email: formData.email.trim(),
+          message: formData.message.trim(),
+          to_email: 'menaremon34@gmail.com',
+          reply_to: formData.email.trim(),
+        },
+        { publicKey }
+      );
+  
+      // EmailJS accepted the email request
+      if (response.status === 200) {
+        console.log('Email sent successfully:', response);
+  
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+  
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        throw new Error(`Unexpected EmailJS status: ${response.status}`);
+      }
+    } catch (err) {
+      console.error('Email sending failed:', err);
+  
+      setError(
+        'Your message could not be sent. Please try again or contact me directly via email.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
