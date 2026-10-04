@@ -37,14 +37,24 @@ const Projects = () => {
                     className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] focus-visible:ring-inset"
                     aria-label={`Open details for ${project.title}`}
                   >
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-48 overflow-hidden bg-[#0d0d16]">
                       <img
                         src={project.image}
-                        alt={`${project.title} project screenshot`}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-xl"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] via-transparent to-transparent"></div>
+                      <div className="absolute inset-0 bg-black/25"></div>
+                      <div className="relative left-1/2 z-10 h-full aspect-square -translate-x-1/2 overflow-hidden shadow-2xl shadow-black/40">
+                        <img
+                          src={project.image}
+                          alt={`${project.title} project screenshot`}
+                          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#1E1E1E] via-transparent to-transparent"></div>
                       <div className="absolute top-4 left-4 bg-[#3DDC84] bg-opacity-20 backdrop-blur-sm rounded-lg p-2">
                         <IconComponent className="w-6 h-6 text-[#3DDC84]" />
                       </div>
