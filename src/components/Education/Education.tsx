@@ -65,7 +65,7 @@ const educationData = [
     degree: "Secondary School Certificate",
     degreeShort: "Secondary School Certificate",
     institution: "Ahmed Lotfy Elsayed Experimental Language School",
-    location: "Nashik, Maharashtra",
+    location: "Suez, Egypt",
     year: "2005-2016",
     status: "Completed",
     score: "Distinction",

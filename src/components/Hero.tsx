@@ -112,14 +112,14 @@ const Hero = () => {
                   <h1 className="text-6xl font-bold text-white leading-tight">
                     Mina Remon
                     <span className="block text-[#3DDC84] text-4xl mt-2">
-                      Android Developer
+                      Mobile App Developer
                     </span>
                   </h1>
                   
                   <div className="flex flex-row items-center gap-4 text-gray-400 text-base">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#3DDC84] flex-shrink-0" />
-                      <span>Suez, Egypt</span>
+                      <span>Cairo, Egypt</span>
                     </div>
                     <div className="text-gray-600">•</div>
                     <div className="flex items-center gap-2">
@@ -130,7 +130,7 @@ const Hero = () => {
                 </div>
                 
                 <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-                Passionate Android developer with expertise in <strong className="text-[#3DDC84]">Kotlin</strong> and <strong className="text-[#3DDC84]">Jetpack Compose</strong>. 
+                Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Kotlin, Jetpack Compose</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
                   Crafting beautiful, performant mobile experiences.
                 </p>
                 
@@ -156,7 +156,7 @@ const Hero = () => {
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-12 pt-8 mt-8 border-t border-gray-700 max-w-md">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-[#3DDC84] mb-1">15+</div>
+                    <div className="text-2xl font-bold text-[#3DDC84] mb-1">5+</div>
                     <div className="text-gray-400 text-sm">Projects</div>
                   </div>
                   <div className="text-center">
@@ -174,7 +174,7 @@ const Hero = () => {
                   <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-[#3DDC84] shadow-2xl">
                     <img 
                       src="/profile-pic.jpg" 
-                      alt="Mina Remon - Android Developer"
+                      alt="Mina Remon - Mobile App Developer"
                       className="w-full h-full object-cover"
                       loading="eager"
                     />

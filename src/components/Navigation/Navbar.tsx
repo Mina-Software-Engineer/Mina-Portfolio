@@ -34,7 +34,7 @@ const Navbar = () => {
             className="text-[#3DDC84] font-bold text-xl hover:text-white transition-colors"
             aria-label="Go to top of page"
           >
-            SM
+            Mina Remon
           </button>
           
           {/* Desktop Navigation */}
