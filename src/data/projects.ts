@@ -6,6 +6,7 @@ export type Project = {
   title: string;
   description: string;
   image: string;
+  screenshots?: { src: string; alt: string; caption: string }[];
   icon: LucideIcon;
   techStack: string[];
   metrics: { type: string; value?: string };
@@ -106,7 +107,13 @@ export const projects: Project[] = [
     description: 'A modern native Android messaging app built for real-time conversations, friend discovery, and reliable communication with offline support.',
     
     image: '/projects/moonchat.png',
-    
+    screenshots: [
+      {
+        src: '/projects/moonchat-welcome.webp',
+        alt: 'Moon Chat welcome screen shown on a tilted phone',
+        caption: 'Welcome screen · Moon Chat',
+      },
+    ],
     icon: Smartphone,
     
     techStack: [
