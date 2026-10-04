@@ -113,7 +113,7 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
               </div>
             </aside>
 
-            <div className="space-y-12">
+            <div className="min-w-0 space-y-12">
               <DetailSection title="Overview" text={project.detail.overview} />
               <DetailSection title="The challenge" text={project.detail.challenge} />
               <DetailSection title="The solution" text={project.detail.solution} />
@@ -124,13 +124,13 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
                     <h2 className="text-3xl font-bold">Inside {project.title}</h2>
                     <p className="text-sm text-gray-500">Select an image to explore</p>
                   </div>
-                  <div className="moonchat-gallery-scroll flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
+                  <div className="moonchat-gallery-scroll flex w-full max-w-full snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
                     {screenshots.map((screenshot, index) => (
                       <button
                         key={screenshot.src}
                         type="button"
                         onClick={() => setActiveScreenshot(index)}
-                        className="group relative aspect-[16/10] w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] text-left shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-[#3DDC84]/60 hover:shadow-[#3DDC84]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84]"
+                        className="group relative aspect-[16/10] w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] text-left shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-[#3DDC84]/60 hover:shadow-[#3DDC84]/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] sm:w-[calc((100%-1.25rem)/2)]"
                         aria-label={`Open ${screenshot.caption}`}
                       >
                         <img
