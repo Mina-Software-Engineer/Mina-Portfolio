@@ -42,7 +42,7 @@ const Projects = () => {
                         src={project.image}
                         alt=""
                         aria-hidden="true"
-                        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-[17px]"
+                        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-black/25"></div>
