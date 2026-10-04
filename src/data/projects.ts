@@ -120,6 +120,28 @@ export const projects: Project[] = [
       nextSteps: ['Add conversation screenshots', 'Add architecture notes', 'Add outcomes and learnings'],
     },
   },
+  {
+    slug: 'receiptmanager',
+    title: 'Receipt Management System',
+    description: 'Real-time messaging application with Firebase and Room Database.',
+    image: '/logos/ic_edita_logo.png',
+    icon: Smartphone,
+    techStack: ['Python', 'AI', 'Security', 'OCR'],
+    metrics: { type: 'Impact', value: 'Accessibility' },
+    features: ['Modern UI'],
+    links: { github: '#', demo: '#' },
+    detail: {
+      eyebrow: 'Desktop · Real-time communication',
+      intro: 'A modern messaging experience built around real-time conversations, reliable local data, and accessible interactions.',
+      role: 'Add your role',
+      duration: 'Add duration',
+      category: 'Desktop application',
+      overview: 'Add the story behind Moonchat, including the intended users and the experience you wanted to deliver.',
+      challenge: 'Add the communication or product challenge you explored.',
+      solution: 'Add the architecture, Firebase implementation, pagination strategy, and UX decisions.',
+      nextSteps: ['Add conversation screenshots', 'Add architecture notes', 'Add outcomes and learnings'],
+    },
+  },
 ];
 
 export const getProjectBySlug = (slug: string) => projects.find((project) => project.slug === slug);
