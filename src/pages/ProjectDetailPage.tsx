@@ -75,8 +75,7 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
               </div>
             </div>
             <div className="relative overflow-hidden rounded-2xl border border-gray-800 bg-[#1E1E1E] shadow-2xl shadow-[#3DDC84]/10">
-              <img src={project.image} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45" />
-              <img src={project.image} alt={`${project.title} preview`} className="relative z-10 aspect-[4/3] w-full object-contain p-6" />
+              <img src={project.image} alt={`${project.title} preview`} className="aspect-[4/3] w-full bg-[#0b0b14] object-contain p-6" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent" />
             </div>
           </div>
