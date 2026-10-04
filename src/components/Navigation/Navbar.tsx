@@ -35,9 +35,9 @@ const Navbar = () => {
             aria-label="Go to top of page"
           >
             <img 
-              src= "./logos/my_logo.png"
-              width={20} 
-              height={20} 
+              src= "./logos/my_logo.jpg"
+              width={50} 
+              height={50} 
               alt="Action icon" 
             />
           </button>
