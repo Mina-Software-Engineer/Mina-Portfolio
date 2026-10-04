@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../../firebase';
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -20,76 +18,59 @@ const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    try {
-      // Add document to Firestore if configured
-      if (db) {
-        await addDoc(collection(db, 'contact-messages'), {
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          message: formData.message.trim(),
-          timestamp: serverTimestamp(),
-          status: 'new',
-          userAgent: navigator.userAgent,
-          referrer: document.referrer || 'direct'
-        });
-      } else {
-        console.warn('Firebase is not configured — skipping Firestore submission');
-      }
+  if (isSubmitting) return;
 
-      // Send email notification using EmailJS
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  setIsSubmitting(true);
+  setError('');
 
-      if (serviceId && templateId && publicKey) {
-        try {
-          await emailjs.send(
-            serviceId,
-            templateId,
-            {
-              from_name: formData.name.trim(),
-              from_email: formData.email.trim(),
-              message: formData.message.trim(),
-              to_email: 'menaremon34@gmail.com',
-              reply_to: formData.email.trim(),
-            },
-            publicKey
-          );
-          console.log('Email notification sent successfully');
-        } catch (emailError) {
-          // Log but don't fail - message is already saved to Firestore
-          const errorMessage = emailError instanceof Error ? emailError.message : (emailError as { text?: string })?.text || 'Unknown error';
-          console.warn('EmailJS failed (message saved to Firestore):', errorMessage);
-          
-          // Check for specific Gmail reconnection error
-          if (typeof errorMessage === 'string' && (errorMessage.includes('Gmail_API') || errorMessage.includes('Invalid grant'))) {
-            console.error('Gmail account needs reconnection in EmailJS dashboard');
-          }
-        }
-      } else {
-        console.warn('EmailJS configuration missing - email notification not sent');
-      }
+  try {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-      setIsSubmitted(true);
-
-      // Reset form after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: '', email: '', message: '' });
-      }, 5000);
-
-    } catch (err) {
-      console.error('Error submitting form:', err);
-      setError('Failed to send message. Please try again or contact me directly via WhatsApp or Telegram.');
-    } finally {
-      setIsSubmitting(false);
+    if (!serviceId || !templateId || !publicKey) {
+      throw new Error(
+        'Email service is not configured. Please try again later.'
+      );
     }
-  };
+
+    await emailjs.send(
+      serviceId,
+      templateId,
+      {
+        from_name: formData.name.trim(),
+        from_email: formData.email.trim(),
+        message: formData.message.trim(),
+        to_email: 'menaremon34@gmail.com',
+        reply_to: formData.email.trim(),
+      },
+      {
+        publicKey,
+      }
+    );
+
+    setIsSubmitted(true);
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 5000);
+  } catch (err) {
+    console.error('Contact form submission failed:', err);
+    setError(
+      'Unable to send your message. Please try again or contact me directly via email.'
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
