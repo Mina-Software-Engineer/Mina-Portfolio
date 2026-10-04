@@ -23,6 +23,12 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
+            const solidImageBackground = project.slug === 'moonchat'
+              ? 'bg-[#0C0F19]'
+              : project.slug === 'wassalny'
+                ? 'bg-[#0c0b0d]'
+                : 'bg-[#0d0d16]';
+            const usesSolidImageBackground = project.slug === 'moonchat' || project.slug === 'wassalny';
             return (
               <ScrollReveal
                 key={project.slug}
@@ -37,14 +43,16 @@ const Projects = () => {
                     className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] focus-visible:ring-inset"
                     aria-label={`Open details for ${project.title}`}
                   >
-                    <div className="relative h-48 overflow-hidden bg-[#0d0d16]">
-                      <img
-                        src={project.image}
-                        alt=""
-                        aria-hidden="true"
-                        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-[17px]"
-                        loading="lazy"
-                      />
+                    <div className={`relative h-48 overflow-hidden ${solidImageBackground}`}>
+                      {!usesSolidImageBackground && (
+                        <img
+                          src={project.image}
+                          alt=""
+                          aria-hidden="true"
+                          className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-[17px]"
+                          loading="lazy"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-black/25"></div>
                       <div className="relative left-1/2 z-10 h-full aspect-square -translate-x-1/2 overflow-hidden shadow-2xl shadow-black/40">
                         <img
