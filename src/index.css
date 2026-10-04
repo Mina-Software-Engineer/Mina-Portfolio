@@ -561,6 +561,29 @@ section > div:first-child {
   filter: invert(1);
 }
 
+.moonchat-gallery-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(61, 220, 132, 0.7) rgba(30, 30, 30, 0.8);
+}
+
+.moonchat-gallery-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.moonchat-gallery-scroll::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 999px;
+}
+
+.moonchat-gallery-scroll::-webkit-scrollbar-thumb {
+  background: rgba(61, 220, 132, 0.7);
+  border-radius: 999px;
+}
+
+.moonchat-gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3DDC84;
+}
+
 @keyframes scroller {
   from {
     transform: translateX(0);
