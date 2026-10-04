@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Museum Guide",
     description: "an interactive companion that lets visitors control a guide robot via an on-screen museum map. Users can ask questions through voice commands and receive AI-powered responses from the robot. The app also enables QR code scanning of exhibits to instantly display detailed information. It seamlessly blends physical navigation, and digital content for an enriched museum experience.",
-    image: "/logos/museumguide.png",
+    image: "/logos/museumguide.jpg",
     icon: Smartphone,
     techStack: ["Room Database", "Clean Architecture", "Kotlin"],
     metrics: { type: "Graduation Project" },
