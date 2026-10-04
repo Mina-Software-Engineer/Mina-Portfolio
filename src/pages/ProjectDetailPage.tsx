@@ -169,13 +169,9 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
             </div>
           </div>
         </section>
-      </main>
+      
 
-      <footer className="border-t border-gray-800 py-8">
-        <div className="container mx-auto px-4 text-center text-sm text-gray-500">More project details coming soon.</div>
-      </footer>
-
-      {activeScreenshot !== null && screenshots[activeScreenshot] && (
+        {activeScreenshot !== null && screenshots[activeScreenshot] && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-[#050509]/95 p-4 backdrop-blur-md sm:p-8"
           role="dialog"
@@ -242,7 +238,12 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
             </button>
           )}
         </div>
-      )}
+        )}
+      </main>
+
+      <footer className="border-t border-gray-800 py-8">
+        <div className="container mx-auto px-4 text-center text-sm text-gray-500">More project details coming soon.</div>
+      </footer>
     </div>
   );
 };
