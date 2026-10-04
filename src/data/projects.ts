@@ -63,7 +63,7 @@ export const projects: Project[] = [
     techStack: ['Modern UI', 'Responsive Design'],
     metrics: { type: 'Project' },
     features: ['Real-time update', 'Asteroids sorting'],
-    links: { demo: '#', github: '#' },
+    links: {github: '#' },
     detail: {
       eyebrow: 'Android · NASA API',
       intro: 'A data-rich space experience for exploring near-Earth objects in a clear, approachable interface.',
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     techStack: ['Room Database', 'Kotlin', 'RESTful API'],
     metrics: { type: 'Project' },
     features: ['Daily inspiration', 'Quote sharing'],
-    links: { demo: '#', github: '#' },
+    links: { github: '#' },
     detail: {
       eyebrow: 'Android · Personal project',
       intro: 'A focused daily inspiration app designed to make discovering and sharing a great quote feel effortless.',
@@ -100,26 +100,73 @@ export const projects: Project[] = [
   },
   {
     slug: 'moonchat',
-    title: 'Moonchat',
-    description: 'Real-time messaging application with Firebase and Room Database.',
+    
+    title: 'MoonChat',
+    
+    description: 'A modern native Android messaging app built for real-time conversations, friend discovery, and reliable communication with offline support.',
+    
     image: '/projects/moonchat.png',
+    
     icon: Smartphone,
-    techStack: ['Kotlin', 'Firebase', 'Room Database', 'MVVM', 'Pagination'],
-    metrics: { type: 'Impact', value: 'Accessibility' },
-    features: ['Modern UI', 'Real-time messaging'],
-    links: { github: '#', demo: '#' },
-    detail: {
-      eyebrow: 'Android · Real-time communication',
-      intro: 'A modern messaging experience built around real-time conversations, reliable local data, and accessible interactions.',
-      role: 'Add your role',
-      duration: 'Add duration',
-      category: 'Mobile application',
-      overview: 'Add the story behind Moonchat, including the intended users and the experience you wanted to deliver.',
-      challenge: 'Add the communication or product challenge you explored.',
-      solution: 'Add the architecture, Firebase implementation, pagination strategy, and UX decisions.',
-      nextSteps: ['Add conversation screenshots', 'Add architecture notes', 'Add outcomes and learnings'],
+    
+    techStack: [
+    'Kotlin',
+    'Android SDK',
+    'Firebase Authentication',
+    'Firebase Realtime Database',
+    'Cloud Firestore',
+    'Firebase Cloud Messaging',
+    'Room Database',
+    'Android Paging',
+    'Coroutines',
+    'RecyclerView'
+    ],
+    
+    metrics: {
+    type: 'Focus',
+    value: 'Real-time messaging'
     },
-  },
+    
+    features: [
+    'Real-time one-to-one messaging',
+    'Optimistic message sending with offline queuing and automatic retry',
+    'Paginated chat history with local Room caching',
+    'Delivered and read message states',
+    'Friend requests with accept/reject interactions',
+    'Push notifications for messages and friend activity',
+    'User presence and network connectivity handling',
+    'Chat history and unread-message management'
+    ],
+    
+    links: {
+    github: 'https://github.com/Mina-Software-Engineer/MoonChatRepo'
+    },
+    
+    detail: {
+    eyebrow: 'Android · Real-time communication',
+    
+    intro: 'MoonChat is a native Android messaging experience designed around fast, dependable communication. I focused on making conversations feel immediate while keeping message history available locally and maintaining reliable synchronization with Firebase.',
+    
+    role: 'Solo Android Developer — responsible for application architecture, UI implementation, Firebase integration, local data persistence, real-time synchronization, notifications, and messaging reliability.',
+    
+    duration: 'Ongoing personal project',
+    
+    category: 'Mobile application',
+    
+    overview: 'MoonChat was designed for users who want a straightforward, modern messaging experience for private conversations and building a personal network. The goal was to combine a clean chat interface with the reliability users expect from a real-world messaging application, including persistent conversations, friend management, delivery/read states, notifications, and graceful behavior when connectivity is unstable.',
+    
+    challenge: 'The main challenge was keeping conversations consistent across local storage, Firebase, and real-time updates without making the interface feel slow or fragile. The app also needed to handle large chat histories efficiently, distinguish sent and received messages, prevent duplicate real-time events, preserve messages during connectivity loss, and notify users when activity happens outside the active conversation.',
+    
+    solution: 'I built a layered Android architecture around Kotlin, using Room as the local source for cached chat data and Firebase Realtime Database/Firestore for remote communication and user data. Android Paging with a RemoteMediator loads conversation history incrementally instead of pulling the entire chat at once. Message sending uses optimistic local updates, allowing messages to appear immediately while pending or failed messages are automatically synchronized when connectivity returns. Real-time Firebase listeners update incoming messages and delivery/read states, while Firebase Cloud Messaging handles push notifications for chat messages and friend-request events.',
+    
+    nextSteps: [
+      'Continue refining synchronization and message delivery reliability',
+      'Expand the social layer with richer friend discovery and suggestions',
+      'Improve testing, performance monitoring, and production readiness'
+    ]
+    
+    }
+    }
   {
     slug: 'receiptmanager',
     title: 'Receipt Management System',
