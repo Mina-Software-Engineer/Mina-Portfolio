@@ -85,6 +85,25 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
               <DetailSection title="Overview" text={project.detail.overview} />
               <DetailSection title="The challenge" text={project.detail.challenge} />
               <DetailSection title="The solution" text={project.detail.solution} />
+              {project.screenshots && project.screenshots.length > 0 && (
+                <section>
+                  <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#3DDC84]">App screen</p>
+                  <h2 className="mb-6 text-3xl font-bold">A first look at Moon Chat</h2>
+                  <div className="max-w-md overflow-hidden rounded-2xl border border-gray-800 bg-[#0b0b14] p-3 shadow-2xl shadow-[#3DDC84]/10">
+                    {project.screenshots.map((screenshot) => (
+                      <figure key={screenshot.src}>
+                        <img
+                          src={screenshot.src}
+                          alt={screenshot.alt}
+                          className="h-auto w-full rounded-xl"
+                          loading="lazy"
+                        />
+                        <figcaption className="px-2 pb-1 pt-4 text-sm text-gray-400">{screenshot.caption}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </section>
+              )}
               <section>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#3DDC84]">Your next additions</p>
                 <h2 className="mb-5 text-3xl font-bold">Make this page yours</h2>

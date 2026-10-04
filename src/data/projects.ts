@@ -6,6 +6,7 @@ export type Project = {
   title: string;
   description: string;
   image: string;
+  screenshots?: { src: string; alt: string; caption: string }[];
   icon: LucideIcon;
   techStack: string[];
   metrics: { type: string; value?: string };
@@ -103,6 +104,13 @@ export const projects: Project[] = [
     title: 'Moonchat',
     description: 'Real-time messaging application with Firebase and Room Database.',
     image: '/projects/moonchat.png',
+    screenshots: [
+      {
+        src: '/projects/moonchat-welcome.webp',
+        alt: 'Moon Chat welcome screen shown on a tilted phone',
+        caption: 'Welcome screen · Moon Chat',
+      },
+    ],
     icon: Smartphone,
     techStack: ['Kotlin', 'Firebase', 'Room Database', 'MVVM', 'Pagination'],
     metrics: { type: 'Impact', value: 'Accessibility' },
