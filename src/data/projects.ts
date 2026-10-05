@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Globe, Smartphone } from 'lucide-react';
+import { Globe, Monitor, Smartphone } from 'lucide-react';
 
 export type Project = {
   slug: string;
@@ -31,6 +31,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  //Moonchat
   {
     slug: 'moonchat',
     
@@ -39,7 +40,7 @@ export const projects: Project[] = [
     description: 'A modern native Android messaging app built for real-time conversations, friend discovery, and reliable communication with offline support.',
     
     image: '/projects/moonchat_logo.png',
-    imageBackgroundColor: '#0C0F19',
+    imageBackgroundColor: '#090F19',
     screenshots: [
       {
         src: '/projects/moonchat-welcome.webp',
@@ -142,6 +143,7 @@ export const projects: Project[] = [
     ]
     }
   },
+  //Wassalny
   {
     slug: 'wassalny',
   
@@ -150,7 +152,7 @@ export const projects: Project[] = [
     description: 'A native Android ride-hailing application that connects riders with drivers through real-time trip requests, location tracking, route navigation, and trip status updates.',
   
     image: '/projects/wassalny_logo.png',
-    imageBackgroundColor: '#0c0b0d',
+    imageBackgroundColor: '#0C0B0D',
   
     icon: Smartphone,
   
@@ -221,12 +223,75 @@ export const projects: Project[] = [
       ]
     }
   },
+  //Edita
+  {
+    slug: 'receiptmanager',
+    title: 'Receipt Management System',
+    description: 'An AI-powered Windows desktop application developed for Edita’s Accounting Department to extract InstaPay receipt data, validate transactions, maintain SQLite records, and automate Excel reporting and Outlook email preparation.',
+    image: '/logos/ic_edita_logo.png',
+    imageBackgroundColor: '#1D1D1D',
+    icon: Monitor,
+    techStack: [
+      'Python',
+      'PyQt6',
+      'Google Gemini AI',
+      'SQLite',
+      'OpenPyXL',
+      'Pillow',
+      'Microsoft Outlook COM Automation',
+      'PyInstaller',
+      'Pytest'
+    ],
+    metrics: {
+      type: 'Core capability',
+      value: 'AI-powered receipt processing'
+    },
+    features: [
+      'AI-powered extraction of receipt information using Google Gemini',
+      'Extraction of transaction amounts, recipient account details, receipt references, dates, and note information',
+      'Receipt image previews and batch processing with progress tracking',
+      'Review and correction of extracted data before saving',
+      'Validation against approved account numbers and note numbers',
+      'Duplicate receipt detection and SQLite data persistence',
+      'Automatic generation of date-organized Excel reports',
+      'Receipt image archiving in compressed ZIP files',
+      'Outlook integration for preparing emails with report and image attachments',
+      'Configurable email recipients and application settings',
+      'Approved note-number management and Excel export',
+      'Automated tests for core application functionality'
+    ],
+    links: { github: 'https://github.com/Mina-Software-Engineer/InstaPay-Receipt-Extractor/tree/master'},
+    detail: {
+      eyebrow: 'Desktop Development · AI & Accounting Automation',
+      intro: 'InstaPay Receipt Register is a desktop application developed for Editas Accounting Department to streamline the process of registering InstaPay transactions. It combines AI-based receipt extraction, data validation, local database storage, and automated reporting in a single workflow.',
+      role:'Python Desktop Developer — responsible for application development, Gemini AI integration, receipt-processing workflows, validation rules, SQLite database management, Excel report generation, and Outlook integration.',
+
+      duration: 'Freelance project',
+      category: 'Desktop application',
+      overview:'The application is designed for accounting professionals who need to process InstaPay receipts and maintain accurate transaction records. Rather than manually transcribing receipt information and preparing reports, users can process receipt images, review the extracted values, verify transaction details, and save accepted records. The application then organizes the records into Excel reports and prepares the related email attachments, making the workflow more structured and efficient.',
+      challenge:
+      'The main challenge was reducing repetitive manual data entry without sacrificing the accuracy required for accounting workflows. AI extraction can produce incorrect or incomplete values, while duplicate receipts, unapproved accounts, and invalid note numbers can compromise record quality. The application therefore needed to combine automated extraction with explicit human review, business-rule validation, reliable persistence, and consistent report generation.',
+
+      solution:
+      'I built the application in Python with a PyQt6 desktop interface. Google Gemini AI processes receipt images and returns structured transaction data, while Pillow handles image loading and previews. Users can review extracted values before verification. A dedicated validation and database workflow checks receipt references, approved accounts, note numbers, and transaction amounts before records are saved in SQLite. OpenPyXL generates date-organized Excel reports, while the reporting module archives receipt images into ZIP files. A Windows-specific Outlook integration using pywin32 prepares emails with the generated reports and image archive attached. The code is separated into application, database, reporting, and service modules to keep the main responsibilities organized.',
+
+      nextSteps: [
+        'Improve extraction accuracy across different receipt formats and image quality levels',
+        'Expand automated tests for AI extraction, validation, and end-to-end workflows',
+        'Enhance error recovery and reporting for failed or incomplete processing',
+        'Continue improving daily report organization and accounting auditability',
+        'Evaluate additional workflow automation based on accounting department feedback'
+      ],
+    },
+  },
+  //Museum
   {
     slug: 'museum-guide',
     title: 'Museum Guide',
     description:
       'An interactive companion that lets visitors control a guide robot via an on-screen museum map. Users can ask questions through voice commands and receive AI-powered responses from the robot. The app also enables QR code scanning of exhibits to instantly display detailed information.',
     image: '/logos/museumguide.jpg',
+    imageBackgroundColor: '#010101',
     icon: Smartphone,
     techStack: ['Room Database', 'Clean Architecture', 'Kotlin'],
     metrics: { type: 'Graduation Project' },
@@ -246,33 +311,13 @@ export const projects: Project[] = [
       nextSteps: ['Add a project gallery', 'Add your contribution details', 'Add outcomes or lessons learned'],
     },
   },
-  {
-    slug: 'asteroid-radar',
-    title: 'Asteroid Radar',
-    description: 'NASA API integration app displaying near-Earth asteroids with Room Database caching.',
-    image: '/projects/asteroid_logo.png',
-    icon: Globe,
-    techStack: ['Modern UI', 'Responsive Design'],
-    metrics: { type: 'Project' },
-    features: ['Real-time update', 'Asteroids sorting'],
-    links: {github: '#' },
-    detail: {
-      eyebrow: 'Android · NASA API',
-      intro: 'A data-rich space experience for exploring near-Earth objects in a clear, approachable interface.',
-      role: 'Add your role',
-      duration: 'Add duration',
-      category: 'Mobile application',
-      overview: 'Add the project context, the data source, and what makes this experience useful or memorable.',
-      challenge: 'Add the problem you wanted to solve with NASA data.',
-      solution: 'Add the features, technical approach, and design decisions you made.',
-      nextSteps: ['Add screenshots or a video', 'Add API and caching details', 'Add project outcomes'],
-    },
-  },
+  //Quotes
   {
     slug: 'quotes-app',
     title: 'Quotes App',
     description: 'Daily inspiration app with quote sharing functionality and local database storage.',
     image: '/projects/quoteslogo.png',
+    imageBackgroundColor: '#151B24',
     icon: Smartphone,
     techStack: ['Room Database', 'Kotlin', 'RESTful API'],
     metrics: { type: 'Project' },
@@ -290,28 +335,32 @@ export const projects: Project[] = [
       nextSteps: ['Add a visual walkthrough', 'Add your responsibilities', 'Add measurable results'],
     },
   },
+  //Asteroid
   {
-    slug: 'receiptmanager',
-    title: 'Receipt Management System',
-    description: 'Real-time messaging application with Firebase and Room Database.',
-    image: '/logos/ic_edita_logo.png',
+    slug: 'asteroid-radar',
+    title: 'Asteroid Radar',
+    description: 'NASA API integration app displaying near-Earth asteroids with Room Database caching.',
+    image: '/projects/asteroid_logo.png',
+    imageBackgroundColor: '#FFFFFF',
     icon: Smartphone,
-    techStack: ['Python', 'AI', 'Security', 'OCR'],
-    metrics: { type: 'Impact', value: 'Accessibility' },
-    features: ['Modern UI'],
-    links: { github: '#', demo: '#' },
+    techStack: ['Modern UI', 'Responsive Design'],
+    metrics: { type: 'Project' },
+    features: ['Real-time update', 'Asteroids sorting'],
+    links: {github: '#' },
     detail: {
-      eyebrow: 'Desktop · Real-time communication',
-      intro: 'A modern messaging experience built around real-time conversations, reliable local data, and accessible interactions.',
+      eyebrow: 'Android · NASA API',
+      intro: 'A data-rich space experience for exploring near-Earth objects in a clear, approachable interface.',
       role: 'Add your role',
       duration: 'Add duration',
-      category: 'Desktop application',
-      overview: 'Add the story behind Moonchat, including the intended users and the experience you wanted to deliver.',
-      challenge: 'Add the communication or product challenge you explored.',
-      solution: 'Add the architecture, Firebase implementation, pagination strategy, and UX decisions.',
-      nextSteps: ['Add conversation screenshots', 'Add architecture notes', 'Add outcomes and learnings'],
+      category: 'Mobile application',
+      overview: 'Add the project context, the data source, and what makes this experience useful or memorable.',
+      challenge: 'Add the problem you wanted to solve with NASA data.',
+      solution: 'Add the features, technical approach, and design decisions you made.',
+      nextSteps: ['Add screenshots or a video', 'Add API and caching details', 'Add project outcomes'],
     },
   },
+
+  
 ];
 
 export const getProjectBySlug = (slug: string) => projects.find((project) => project.slug === slug);

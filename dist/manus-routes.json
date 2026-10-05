@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "path": "/", "title": "Mina Remon · Android & Full-Stack Developer" },
+    { "path": "/projects/museum-guide", "title": "Museum Guide · Mina Remon" },
+    { "path": "/projects/asteroid-radar", "title": "Asteroid Radar · Mina Remon" },
+    { "path": "/projects/quotes-app", "title": "Quotes App · Mina Remon" },
+    { "path": "/projects/moonchat", "title": "Moonchat · Mina Remon" }
+  ]
+}
