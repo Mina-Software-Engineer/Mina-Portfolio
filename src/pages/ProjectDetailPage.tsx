@@ -44,12 +44,6 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
     setActiveScreenshot((current) => current === null ? null : (current + 1) % screenshots.length);
   };
 
-  const heroBackgroundClass = project.slug === 'moonchat'
-    ? 'bg-[#0C0F19]'
-    : project.slug === 'wassalny'
-      ? 'bg-[#0c0b0d]'
-      : 'bg-[#1E1E1E]';
-
   return (
     <div className="min-h-screen bg-[#121212] text-white">
       <header className="sticky top-0 z-50 border-b border-gray-800/80 bg-[#121212]/95 backdrop-blur-sm">
@@ -80,7 +74,10 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
                 ))}
               </div>
             </div>
-            <div className={`relative overflow-hidden rounded-2xl border border-gray-800 ${heroBackgroundClass} shadow-2xl shadow-[#3DDC84]/10`}>
+            <div
+              className="relative overflow-hidden rounded-2xl border border-gray-800 bg-[#1E1E1E] shadow-2xl shadow-[#3DDC84]/10"
+              style={project.imageBackgroundColor ? { backgroundColor: project.imageBackgroundColor } : undefined}
+            >
               <img src={project.image} alt={`${project.title} preview`} className="aspect-[4/3] w-full object-contain p-6" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/60 to-transparent" />
             </div>

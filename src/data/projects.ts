@@ -6,6 +6,7 @@ export type Project = {
   title: string;
   description: string;
   image: string;
+  imageBackgroundColor?: string;
   screenshots?: { src: string; alt: string; caption: string }[];
   icon: LucideIcon;
   techStack: string[];
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     description: 'A modern native Android messaging app built for real-time conversations, friend discovery, and reliable communication with offline support.',
     
     image: '/projects/moonchat_logo.png',
+    imageBackgroundColor: '#0C0F19',
     screenshots: [
       {
         src: '/projects/moonchat-welcome.webp',
@@ -148,6 +150,7 @@ export const projects: Project[] = [
     description: 'A native Android ride-hailing application that connects riders with drivers through real-time trip requests, location tracking, route navigation, and trip status updates.',
   
     image: '/projects/wassalny_logo.png',
+    imageBackgroundColor: '#0c0b0d',
   
     icon: Smartphone,
   

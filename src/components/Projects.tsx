@@ -23,12 +23,6 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
-            const solidImageBackground = project.slug === 'moonchat'
-              ? 'bg-[#0C0F19]'
-              : project.slug === 'wassalny'
-                ? 'bg-[#0c0b0d]'
-                : 'bg-[#0d0d16]';
-            const usesSolidImageBackground = project.slug === 'moonchat' || project.slug === 'wassalny';
             return (
               <ScrollReveal
                 key={project.slug}
@@ -43,8 +37,11 @@ const Projects = () => {
                     className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] focus-visible:ring-inset"
                     aria-label={`Open details for ${project.title}`}
                   >
-                    <div className={`relative h-48 overflow-hidden ${solidImageBackground}`}>
-                      {!usesSolidImageBackground && (
+                    <div
+                      className="relative h-48 overflow-hidden bg-[#0d0d16]"
+                      style={project.imageBackgroundColor ? { backgroundColor: project.imageBackgroundColor } : undefined}
+                    >
+                      {!project.imageBackgroundColor && (
                         <img
                           src={project.image}
                           alt=""
