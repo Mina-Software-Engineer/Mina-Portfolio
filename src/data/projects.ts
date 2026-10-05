@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Globe, Monitor, Smartphone } from 'lucide-react';
+import { Monitor, Smartphone } from 'lucide-react';
 
 export type Project = {
   slug: string;
