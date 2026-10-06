@@ -120,17 +120,6 @@ const ProjectDetailPage = ({ project }: { project: Project }) => {
               <DetailSection title="Overview" text={project.detail.overview} />
               <DetailSection title="The challenge" text={project.detail.challenge} />
               <DetailSection title="The solution" text={project.detail.solution} />
-              <section>
-                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#3DDC84]">Your next additions</p>
-                <h2 className="mb-5 text-3xl font-bold">Make this page yours</h2>
-                <ul className="grid gap-3 sm:grid-cols-3">
-                  {project.detail.nextSteps.map((step) => (
-                    <li key={step} className="rounded-xl border border-dashed border-gray-700 bg-[#1E1E1E]/60 p-4 text-sm leading-relaxed text-gray-400">
-                      {step}
-                    </li>
-                  ))}
-                </ul>
-              </section>
             </div>
           </div>
           {screenshots.length > 0 && (
