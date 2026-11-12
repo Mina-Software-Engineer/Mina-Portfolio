@@ -65,7 +65,7 @@ const Hero = () => {
                 </div>
                 
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-                  Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Kotlin, Jetpack Compose</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
+                  Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Native Android Development, Kotlin</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
                     Crafting beautiful, performant mobile experiences.
                 </p>
                 
