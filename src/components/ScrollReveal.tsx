@@ -1,3 +1,5 @@
+// Reusable wrapper that animates content into view as it enters the viewport.
+
 import React, { ReactNode } from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
 

@@ -1,3 +1,5 @@
+// Presentational item for one entry in the experience timeline.
+
 import React from 'react';
 import { MapPin } from 'lucide-react';
 

@@ -1,3 +1,5 @@
+/* Global theme tokens, reusable UI effects, layout utilities, and animations. */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

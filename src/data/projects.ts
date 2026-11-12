@@ -1,3 +1,5 @@
+// Shared project records used by project cards and project detail pages.
+
 import type { LucideIcon } from 'lucide-react';
 import { Monitor, Smartphone } from 'lucide-react';
 

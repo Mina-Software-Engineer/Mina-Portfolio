@@ -1,3 +1,5 @@
+// Education section that renders the academic timeline/cards.
+
 import React from 'react';
 import ScrollReveal from '../ScrollReveal';
 import EducationCard from './EducationCard';

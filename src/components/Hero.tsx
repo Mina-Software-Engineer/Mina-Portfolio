@@ -1,3 +1,5 @@
+// Portfolio hero section with profile information and primary calls to action.
+
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
 import ParticleBackground from './ParticleBackground';

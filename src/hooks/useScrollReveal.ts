@@ -1,3 +1,5 @@
+// Intersection Observer hook for reveal-on-scroll animations.
+
 import { useEffect, useRef, useState } from 'react';
 
 interface ScrollRevealOptions {

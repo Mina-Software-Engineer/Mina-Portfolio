@@ -1,3 +1,5 @@
+// Reusable navigation link with active-section styling.
+
 import React from 'react';
 
 interface NavLinkProps {

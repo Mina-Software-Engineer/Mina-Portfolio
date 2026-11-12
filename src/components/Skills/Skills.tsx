@@ -1,3 +1,5 @@
+// Skills section composition: competencies, services, and technical expertise.
+
 import React from 'react';
 import ScrollReveal from '../ScrollReveal';
 import CoreCompetencies from './CoreCompetencies';

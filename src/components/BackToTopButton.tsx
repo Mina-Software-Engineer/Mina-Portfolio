@@ -1,3 +1,5 @@
+// Floating control that returns the visitor to the top of the page.
+
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 

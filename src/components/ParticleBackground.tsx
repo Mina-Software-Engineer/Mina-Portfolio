@@ -1,3 +1,5 @@
+// Lightweight tsparticles background used behind the hero content.
+
 import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';

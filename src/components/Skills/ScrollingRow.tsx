@@ -1,3 +1,5 @@
+// Reusable horizontal marquee for technical-stack items.
+
 import React from 'react';
 
 export type TechItem = {

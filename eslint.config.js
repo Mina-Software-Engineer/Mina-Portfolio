@@ -1,3 +1,5 @@
+// ESLint configuration for the React and TypeScript source tree.
+
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';

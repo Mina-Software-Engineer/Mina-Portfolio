@@ -1,3 +1,5 @@
+// Work-experience timeline section and timeline data composition.
+
 import ScrollReveal from '../ScrollReveal';
 import TimelineItem from './TimelineItem';
 

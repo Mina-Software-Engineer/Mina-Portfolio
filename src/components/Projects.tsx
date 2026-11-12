@@ -1,3 +1,5 @@
+// Project gallery and links to project detail pages and source repositories.
+
 import ScrollReveal from './ScrollReveal';
 import { Github, ExternalLink, PlayCircle } from 'lucide-react';
 import { projects } from '../data/projects';

@@ -1,3 +1,5 @@
+// Professional services data and responsive service-card grid.
+
 import React from 'react';
 import { Smartphone, Palette, Users, Brush } from 'lucide-react';
 

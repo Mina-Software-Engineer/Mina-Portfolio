@@ -1,3 +1,5 @@
+// Horizontally scrolling competency cards with hover expansion.
+
 import React from 'react';
 import { Smartphone, Brain, Globe, Cloud, Database, MapPin, Layers, ScanText, Monitor, GitBranch } from 'lucide-react';
 

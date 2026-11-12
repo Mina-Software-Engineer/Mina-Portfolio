@@ -1,3 +1,5 @@
+// Technology rows that power the Technical Expertise marquee.
+
 import React from 'react';
 import ScrollingRow, { TechItem } from './ScrollingRow';
 

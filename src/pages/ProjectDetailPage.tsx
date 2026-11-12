@@ -1,3 +1,5 @@
+// Reusable project case-study page populated from the shared project data.
+
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ChevronLeft, ChevronRight, ExternalLink, Github, X } from 'lucide-react';
 import type { Project } from '../data/projects';

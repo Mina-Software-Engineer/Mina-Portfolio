@@ -1,3 +1,5 @@
+// Contact section containing contact details and the contact form.
+
 import React from 'react';
 import ScrollReveal from '../ScrollReveal';
 import ContactForm from './ContactForm';

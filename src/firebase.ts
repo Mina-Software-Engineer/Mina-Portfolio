@@ -1,3 +1,5 @@
+// Firebase client initialization used by the portfolio contact flow.
+
 // Firebase configuration and initialization
 import { initializeApp, type FirebaseApp } from 'firebase/app';
 import { getFirestore, type Firestore } from 'firebase/firestore';

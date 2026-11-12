@@ -1,3 +1,5 @@
+// Tailwind content paths and project theme extensions.
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],

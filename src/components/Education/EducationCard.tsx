@@ -1,3 +1,5 @@
+// Presentational card for one education or certification record.
+
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   GraduationCap, 

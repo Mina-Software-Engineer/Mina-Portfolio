@@ -1,3 +1,5 @@
+// Responsive site navigation and mobile menu controls.
+
 import React, { useState, useEffect } from 'react';
 import NavLink from './NavLink';
 import { Menu, X } from 'lucide-react';

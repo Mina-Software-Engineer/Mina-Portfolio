@@ -1,3 +1,5 @@
+// Application shell and pathname-based routing for the portfolio.
+
 import Navbar from './components/Navigation/Navbar';
 import BackToTopButton from './components/BackToTopButton';
 import Hero from './components/Hero';
