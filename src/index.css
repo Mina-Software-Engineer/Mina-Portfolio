@@ -315,7 +315,7 @@ html, body {
 
 /* Skill Card Hover - Professional */
 .skill-card {
-  height: 22rem;
+  height: 9.5rem;
   overflow: hidden;
   cursor: default;
   transition: all 0.3s ease;
@@ -325,6 +325,7 @@ html, body {
 
 .skill-card:hover,
 .skill-card:focus-visible {
+  height: 22rem;
   transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
