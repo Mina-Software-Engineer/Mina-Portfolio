@@ -154,7 +154,7 @@ export const projects: Project[] = [
     description: 'A native Android ride-hailing application that connects riders with drivers through real-time trip requests, location tracking, route navigation, and trip status updates.',
   
     image: '/projects/wassalny_logo.png',
-    imageBackgroundColor: '#0C0B0D',
+    imageBackgroundColor: '#000000',
   
     icon: Smartphone,
   
@@ -265,9 +265,8 @@ export const projects: Project[] = [
     links: { github: 'https://github.com/Mina-Software-Engineer/InstaPay-Receipt-Extractor/tree/master'},
     detail: {
       eyebrow: 'Desktop Development · AI & Accounting Automation',
-      intro: 'InstaPay Receipt Register is a desktop application developed for Editas Accounting Department to streamline the process of registering InstaPay transactions. It combines AI-based receipt extraction, data validation, local database storage, and automated reporting in a single workflow.',
+      intro: 'InstaPay Receipt Register is a desktop application developed for a Company\'s Accounting Department to streamline the process of registering InstaPay transactions. It combines AI-based receipt extraction, data validation, local database storage, and automated reporting in a single workflow.',
       role:'Python Desktop Developer — responsible for application development, Gemini AI integration, receipt-processing workflows, validation rules, SQLite database management, Excel report generation, and Outlook integration.',
-
       duration: 'Freelance project',
       category: 'Desktop application',
       overview:'The application is designed for accounting professionals who need to process InstaPay receipts and maintain accurate transaction records. Rather than manually transcribing receipt information and preparing reports, users can process receipt images, review the extracted values, verify transaction details, and save accepted records. The application then organizes the records into Excel reports and prepares the related email attachments, making the workflow more structured and efficient.',
@@ -342,8 +341,8 @@ export const projects: Project[] = [
     slug: 'asteroid-radar',
     title: 'Asteroid Radar',
     description: 'NASA API integration app displaying near-Earth asteroids with Room Database caching.',
-    image: '/projects/asteroid_logo.png',
-    imageBackgroundColor: '#FFFFFF',
+    image: '/projects/asteroid_radar_logo.png',
+    imageBackgroundColor: '#151419',
     icon: Smartphone,
     techStack: ['Modern UI', 'Responsive Design'],
     metrics: { type: 'Project' },
