@@ -147,24 +147,28 @@ const CoreCompetencies = () => {
         {scrollingCompetencies.map((competency, index) => {
           const IconComponent = competency.icon;
           return (
-            <div 
+            <div
               key={`${competency.title}-${index}`}
-              className="skill-card bg-[#2D2D2D] rounded-xl p-6 text-center h-full hover:transform hover:scale-105 transition-all duration-300 border border-transparent hover:border-[#3DDC84]"
+              className="skill-card group bg-[#2D2D2D] rounded-xl p-6 text-center border border-transparent hover:border-[#3DDC84]"
+              tabIndex={0}
+              aria-label={`${competency.title}. Hover or focus to view details.`}
             >
               <div className="bg-[#3DDC84] bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <IconComponent className="w-8 h-8 text-[#3DDC84]" />
               </div>
-              <h4 className="text-xl font-semibold text-white mb-3">{competency.title}</h4>
-              <p className="text-gray-400 mb-4 leading-relaxed">{competency.description}</p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {competency.skills.map((skill, skillIndex) => (
-                  <span 
-                    key={skillIndex}
-                    className="bg-[#3DDC84] bg-opacity-10 text-[#3DDC84] px-3 py-1 rounded-full text-sm border border-[#3DDC84] border-opacity-30"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <h4 className="text-xl font-semibold text-white">{competency.title}</h4>
+              <div className="skill-card__details">
+                <p className="text-gray-400 mb-4 leading-relaxed">{competency.description}</p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {competency.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="bg-[#3DDC84] bg-opacity-10 text-[#3DDC84] px-3 py-1 rounded-full text-sm border border-[#3DDC84] border-opacity-30"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           );
