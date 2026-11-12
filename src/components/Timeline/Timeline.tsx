@@ -19,7 +19,7 @@ const timelineData = [
     ],
     logo: "logos/next-gen-institute.jpg"
   },
-  {
+  /*{
     company: "Edita Food Industries",
     position: "Freelance Software Developer",
     duration: "2026 · Freelance Project",
@@ -39,8 +39,8 @@ const timelineData = [
       "Android Development"
     ],
     logo: "logos/edita.jpg"
-  },
-  {
+  },*/
+  ,{
     company: "Udacity Course",
     position: "Advanced Android Kotlin Development",
     duration: "Sep 2022 - Nov 2022 · 3 months",
