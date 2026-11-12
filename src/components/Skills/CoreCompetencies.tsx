@@ -133,17 +133,23 @@ const competencies = [
   }
 ];
 
+const scrollingCompetencies = [...competencies, ...competencies];
+
 const CoreCompetencies = () => {
   return (
     <div className="mb-16">
       <h3 className="text-2xl font-bold text-white mb-8 text-center">Core Competencies</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {competencies.map((competency, index) => {
+      <div
+        className="skills-card-scroller"
+        aria-label="Scrolling list of core competencies"
+      >
+        <div className="skills-card-track">
+        {scrollingCompetencies.map((competency, index) => {
           const IconComponent = competency.icon;
           return (
             <div 
-              key={index}
-              className="bg-[#2D2D2D] rounded-xl p-6 text-center h-full hover:transform hover:scale-105 transition-all duration-300 border border-transparent hover:border-[#3DDC84]"
+              key={`${competency.title}-${index}`}
+              className="skill-card bg-[#2D2D2D] rounded-xl p-6 text-center h-full hover:transform hover:scale-105 transition-all duration-300 border border-transparent hover:border-[#3DDC84]"
             >
               <div className="bg-[#3DDC84] bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <IconComponent className="w-8 h-8 text-[#3DDC84]" />
@@ -163,6 +169,7 @@ const CoreCompetencies = () => {
             </div>
           );
         })}
+        </div>
       </div>
     </div>
   );
