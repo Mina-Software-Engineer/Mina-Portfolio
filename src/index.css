@@ -327,7 +327,7 @@ html, body {
 
 .skill-card:hover,
 .skill-card:focus-visible {
-  height: 24rem;
+  height: 28rem;
   transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
@@ -357,8 +357,8 @@ html, body {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 25rem;
-  padding: 0.5rem;
+  height: 30rem;
+  padding: 0.5rem 0.5rem 1.5rem;
   mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
 }
