@@ -315,7 +315,7 @@ html, body {
 
 /* Skill Card Hover - Professional */
 .skill-card {
-  height: 9.5rem;
+  height: 11.5rem;
   overflow: hidden;
   cursor: default;
   transition: all 0.3s ease;
@@ -372,7 +372,7 @@ html, body {
   flex: 0 0 min(320px, 82vw);
 }
 
-.skills-card-scroller:hover .skills-card-track {
+.skills-card-track:has(.skill-card:hover, .skill-card:focus-visible) {
   animation-play-state: paused;
 }
 
