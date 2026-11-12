@@ -59,7 +59,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className = '' 
             color: '#3DDC84',
             distance: 140,
             enable: true,
-            opacity: 0.25,
+            opacity: 0.3,
             width: 1,
             triangles: {
               enable: true,
@@ -87,7 +87,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className = '' 
             value: 50,
           },
           opacity: {
-            value: { min: 0.2, max: 0.6 },
+            value: { min: 0.3, max: 0.75 },
             animation: {
               enable: true,
               speed: 1,
@@ -116,66 +116,24 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className = '' 
           },
         },
         detectRetina: true,
+        // tsparticles v2 matches responsive rules by maxWidth; desktop uses these base values.
         responsive: [
           {
-            minWidth: 1200,
-            options: {
-              particles: {
-                number: {
-                  density: {
-                    area: 1400,
-                  },
-                  value: 40,
-                },
-                links: {
-                  distance: 160,
-                  opacity: 0.2,
-                },
-                opacity: {
-                  value: { min: 0.15, max: 0.5 },
-                },
-                move: {
-                  speed: 0.8,
-                },
-                twinkle: {
-                  particles: {
-                    frequency: 0.015,
-                  },
-                },
-              },
-            },
-          },
-          {
-            minWidth: 1024,
-            maxWidth: 1199,
+            maxWidth: 1023,
             options: {
               particles: {
                 number: {
                   density: {
                     area: 1100,
                   },
-                  value: 45,
-                },
-                links: {
-                  distance: 150,
-                  opacity: 0.22,
-                },
-                opacity: {
-                  value: { min: 0.18, max: 0.55 },
-                },
-              },
-            },
-          },
-          {
-            minWidth: 769,
-            maxWidth: 1023,
-            options: {
-              particles: {
-                number: {
                   value: 50,
                 },
                 links: {
                   distance: 140,
+                  opacity: 0.25,
+                },
+                opacity: {
+                  value: { min: 0.2, max: 0.6 },
                 },
               },
             },
@@ -185,29 +143,13 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className = '' 
             options: {
               particles: {
                 number: {
+                  density: {
+                    area: 1000,
+                  },
                   value: 45,
                 },
                 links: {
                   distance: 110,
-                },
-                move: {
-                  speed: 1,
-                },
-              },
-            },
-          },
-          {
-            maxWidth: 768,
-            options: {
-              particles: {
-                number: {
-                  value: 45,
-                },
-                links: {
-                  distance: 110,
-                },
-                move: {
-                  speed: 1,
                 },
               },
             },
@@ -222,9 +164,6 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className = '' 
                 links: {
                   distance: 90,
                   enable: true,
-                },
-                move: {
-                  speed: 0.8,
                 },
               },
             },
