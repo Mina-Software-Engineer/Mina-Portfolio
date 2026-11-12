@@ -1,12 +1,51 @@
 // Project gallery and links to project detail pages and source repositories.
 
+import { useEffect, useState, type MouseEvent } from 'react';
 import ScrollReveal from './ScrollReveal';
 import { Github, ExternalLink, PlayCircle } from 'lucide-react';
 import { projects } from '../data/projects';
 
+// These projects keep their placeholder detail routes, so explain their status instead.
+const comingSoonProjectSlugs = new Set(['asteroid-radar', 'quotes-app', 'museum-guide']);
+
 const Projects = () => {
+  const [showComingSoonNotice, setShowComingSoonNotice] = useState(false);
+
+  // Automatically dismiss the notice after it has been visible for a short time.
+  useEffect(() => {
+    if (!showComingSoonNotice) return;
+
+    const timeoutId = window.setTimeout(() => setShowComingSoonNotice(false), 4000);
+    return () => window.clearTimeout(timeoutId);
+  }, [showComingSoonNotice]);
+
+  // Keep the visitor on the projects section when a detail page is not ready yet.
+  const handleProjectDetailsClick = (slug: string, event: MouseEvent<HTMLAnchorElement>) => {
+    if (!comingSoonProjectSlugs.has(slug)) return;
+
+    event.preventDefault();
+    setShowComingSoonNotice(true);
+  };
+
   return (
     <section className="bg-[#121212] py-20 relative overflow-hidden" id="projects">
+      {/* Temporary status notice for projects whose case-study content is not ready. */}
+      <div
+        className={`project-notice ${showComingSoonNotice ? 'project-notice--visible' : ''}`}
+        role="status"
+        aria-live="polite"
+        aria-hidden={!showComingSoonNotice}
+      >
+        <span>Details will be provided soon</span>
+        <button
+          type="button"
+          onClick={() => setShowComingSoonNotice(false)}
+          aria-label="Dismiss notification"
+        >
+          ×
+        </button>
+      </div>
+
       <div className="container mx-auto px-4">
         <div className="absolute inset-0 opacity-5 pointer-events-none overflow-hidden">
           <div className="absolute w-80 h-80 bg-[#3DDC84] rounded-full blur-3xl top-20 left-20 animate-pulse"></div>
@@ -36,6 +75,7 @@ const Projects = () => {
                 <article className="project-card bg-[#1E1E1E] rounded-xl overflow-hidden border border-gray-800 hover:border-[#3DDC84] group h-full flex flex-col">
                   <a
                     href={`/projects/${project.slug}`}
+                    onClick={(event) => handleProjectDetailsClick(project.slug, event)}
                     className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3DDC84] focus-visible:ring-inset"
                     aria-label={`Open details for ${project.title}`}
                   >
@@ -106,6 +146,7 @@ const Projects = () => {
                   <div className="flex gap-3 pt-4 px-6 pb-6 mt-auto border-t border-gray-800">
                     <a
                       href={`/projects/${project.slug}`}
+                      onClick={(event) => handleProjectDetailsClick(project.slug, event)}
                       className="text-sm text-[#3DDC84] hover:text-[#61DAFB] transition-colors mr-auto"
                       aria-label={`Read the ${project.title} case study`}
                     >
