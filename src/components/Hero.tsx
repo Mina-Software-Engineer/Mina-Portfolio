@@ -66,7 +66,7 @@ const Hero = () => {
                 
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
                   Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Native Android Development, Kotlin</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
-                    Crafting beautiful, performant mobile experiences.
+                  Building professional apps with attractive design and high performance.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -130,8 +130,8 @@ const Hero = () => {
                 </div>
                 
                 <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-                Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Kotlin, Jetpack Compose</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
-                  Crafting beautiful, performant mobile experiences.
+                Passionate Mobile App developer with expertise in <strong className="text-[#3DDC84]">Native Android Development, Kotlin</strong> and <strong className="text-[#3DDC84]">Flutter Development</strong>. 
+                  Building professional apps with attractive design and high performance.
                 </p>
                 
                 <div className="flex flex-row gap-4 justify-start pt-4">
