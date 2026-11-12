@@ -227,8 +227,8 @@ export const projects: Project[] = [
   {
     slug: 'receiptmanager',
     title: 'Receipt Management System',
-    description: 'An AI-powered Windows desktop application developed for Edita’s Accounting Department to extract InstaPay receipt data, validate transactions, maintain SQLite records, and automate Excel reporting and Outlook email preparation.',
-    image: '/logos/ic_edita_logo.png',
+    description: 'An AI-powered Windows desktop application developed for company’s Accounting Department to extract InstaPay receipt data, validate transactions, maintain SQLite records, and automate Excel reporting and Outlook email preparation.',
+    image: '/logos/receipt_extractor_logo.png',
     imageBackgroundColor: '#1D1D1D',
     icon: Monitor,
     techStack: [

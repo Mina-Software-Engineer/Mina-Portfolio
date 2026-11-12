@@ -5,7 +5,7 @@ const timelineData = [
   {
     company: "Next Gen Institute",
     position: "Flutter Development Intern",
-    duration: "Sep 2026 - Present",
+    duration: "Sep 2026 - Nov 2026 · 3 months",
     location: "Egypt · Internship",
     achievements: [
       "Participating in a Flutter development internship focused on cross-platform mobile application development",
@@ -44,7 +44,7 @@ const timelineData = [
     company: "Udacity Course",
     position: "Advanced Android Kotlin Development",
     duration: "Sep 2022 - Nov 2022 · 3 months",
-    location: "Cairo, Egypt · Online",
+    location: "Egypt · Online Course",
     achievements: [
       "Developed native Android applications using Kotlin",
       "Implemented modern Android architecture patterns, including MVVM and Clean Architecture",
@@ -55,7 +55,8 @@ const timelineData = [
       "Firebase",
       "Android SDK",
       "MVVM",
-      "Room Database"
+      "Room Database",
+      "RestAPI",
     ],
     logo: "logos/Udacity.jpg",
     logoLink: "https://www.udacity.com/certificate/NY3UNGNV"
